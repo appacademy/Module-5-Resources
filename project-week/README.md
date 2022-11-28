@@ -17,24 +17,25 @@ Presentations with your team and grading will occur on Monday morning, Week 17. 
 # Phase 1 - Authenticate Me & Project Proposals
 Friday's homework had you start working on Authenticate Me Frontend.
 You will be continuing with the clone site you made in the Mod 4 backend project. Please read the **React Solo Project Expectations**, along with the other materials, on AAO.
-Please fill out and submit this [Mod 5 Project Proposal | Google Form](https://forms.gle/uz93a7oghJDgeGJY7) by Monday.
+Please fill out and submit this [Mod 5 Project Proposal | Google Form](https://forms.gle/uz93a7oghJDgeGJY7) before EOD Friday!
 The fields it requires is:
 ```md
 1. Clone: AirBnb or MeetUp
 2. Project Name: CloneBnB
 3. Github Repo Link: http://github.com/your-github-user/your-project-repo/
-4. Github Wiki Link: http://github.com/your-github-user/your-project-repo/wiki (with the wiki pages complete)
-5. Live Link: https://name-of-app.herokuapp.com
-6. Scorecard Link: https://docs.google.com/scorecard... (please see below for the link to create your scorecard)
+4. Live Link: https://name-of-app.onrender.com
+5. Scorecard Link: https://docs.google.com/scorecard... (please see below for the link to create your scorecard)
+6. What is your second feature?
 ```
 ### Scorecard Link
 Please create a scorecard for your project to submit in the proposal!
 #### [Mod 5 Scorecard](https://docs.google.com/spreadsheets/d/1f3zBqm5YVQt2hBFq7NwHCByDobCcCkg85poZsqfiHWU/edit?usp=sharing)
 1.  *File* > *Make a Copy*.
-2. Fill out the top right section, from *Developer* to *Live Link*, as you get the information!
+2. Fill out the top right section, from *Developer* to *Live Link*.
 
 By Monday, you are expected to have completed Authenticate Me Frontend. This needs to be approved by your project advisor before you are allowed to move on to your features.
 # Phase 2: Project Time!
+> This week will consist of standups in the morning and working on your solo project the rest of the day. Technical questions should be asked on your questions slack channel. 
 ## Standups vs Question Asking
 ### Standups
 Standups usually occur during the mornings and before lunch, but the exact times will be posted on your team's slack channel by your project advisor. This is a time for us to see where you are at currently in your project and to see if you are reaching the goals you give yourself. An important skill to learn is prioritization and pacing.
@@ -134,6 +135,7 @@ The gray or blue check means the question seems to have been resolved by a TA or
 
 Some advice on specific features:
 #### Spots
+- **Create form needs to include a single preview image upload at least.**
 - **Edit form doesn't need to include the option to edit the previewImage.**
  - **Longitude and Latitude don't need to be input fields**
 	 - Regular users aren't going to know this information; its usually an external map API that would be able to calculate these from address input.
@@ -170,17 +172,49 @@ Some advice on specific features:
 ## Forms
 Some advice on specific features:
 #### Groups
+- **Create form needs to include a single previewImage upload at least.**
 - **Edit form doesn't need to include the option to edit the previewImage.**
 - **Meetup has a multi-step create form for groups. You do NOT need a multi-step form.** You are allowed to put all the input fields on one page.
+#### Events
+- **Create form needs to include a single previewImage upload at least.**
 
 ------------------------------------
 
 ## General Advice
+- A demo user button is required! It is super useful to get this done ASAP for testing your app!
  - If you cannot view a part of your clone site because you would have to pay (like reviewing a spot or creating a group)
 	 - It does not have to be accurate to the site! Please copy the styling and format from the forms and pages you can see.
 - NPM packages must be approved by your project advisor.
 - CSS frameworks are not allowed.
-- NOTE: **Programatic hard refreshes are not allowed**. This includes manipulating the url through the `window` object. React provides all the tools necessary for dynamic rerendering or window relocation. If you have to have to refresh the page to see your data this is an indication that your reducer/selector code is bugged.
+- NOTE: **Programatic hard refreshes are not allowed**. This includes manipulating the url through the `window` object. React provides all the tools necessary for dynamic rerendering or window relocation. If you have to have to refresh the page to see your data this is an indication that your reducer/selector code is bugged.\
+- If you complete the two features, and are passing pregrading, continue to use this time to work on additional features, like we mentioned above, after graduation you will need at least 4 features to be "greenlit" to start applying to jobs.
+	- A great suggestion for implementation would be adding AWS for photo uploading instead of having users paste in URLs. (see resource links below for guides on this)
+
+-------------------------------------
+
+# Phase 3 - Rolling Optional Pregrading
+In Mod 5, pregrading is optional and done on a first-come-first-serve basis.
+During this week, once you are **pregrade ready**, you may reach out to your project lead to request a pregrade. You will be added to the list. These pregrades unfortunately take quite a bit of time because they must be graded by hand. Staff will most likely not be able to complete every pregrade that was requested. So, it is recconmended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for pregrades is before last break on Friday. Staff cannot pregrade over the weekend. 
+
+## To be pregrade ready:
+- All functionality must be working on all features you implemented with React/Redux working properly. (comment out code for incomplete extra features)
+- There must be validation/error handling on every form.
+- General layout and at least some styling needs to have been completed on every page you implemented.
+    - *CSS does not need to be absolutely completed/polished but majority of the work should be done; staff won't have time to give you a list of all the CSS that you need to fix so your pregrade not mentioning styling problems is not permission to not complete it.* 
+- You have walked through your app *thoroughly* searching for bugs and testing all inputs for any possibilities that could break your site.
+
+## Basic Walkthrough Students should do:
+- create a new user and check every CRUD functionality on both features.
+- testing all the errors you can think of on all your forms. (What edge cases are there? Try to erase data on your edit form, does it give errors too?)
+- walkthrough your site not logged in
+
+# Phase 4 - Monday Grading
+On Monday, presentations will begin shortly after class begins with your group, led by your project advisor. Please check on your live site and reset your database (if neccesary) before class starts. If you are having problems, please let staff know immediately so we are aware. Grading occurs during your presentation but will not be complete until a bit later after presentations are done, so please be patient. 
+
+### Grading and Presentation Requirements
+
+- [React Project CSS Grading Specs][css-grading-specs]
+- [React Project Grading and Presentation Process][grading-presentation]
 
 <hr />
 
@@ -189,11 +223,6 @@ Some advice on specific features:
 - [GitHub README and Wiki Guidelines](https://github.com/flow-state-15/mod-5-extra-resources/blob/main/project-week/github-README-and-wiki-guidelines.md)
 - [Whit's CSS Tips](https://docs.google.com/document/d/1VkeCDf12jokoTdriQycheyfnlfdc-qypDXsxCO5tqNk/edit?usp=sharing)
 - [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips)
-
-### Grading and Presentation Requirements
-
-- [React Project CSS Grading Specs][css-grading-specs]
-- [React Project Grading and Presentation Process][grading-presentation]
 
 ### Project Resources
 
