@@ -18,6 +18,7 @@ modules.
 
 - ### [Project Week Materials][project-week]
 
+  - [Welcome to Module 5 Project!][welcome-project]
   - [React Project CSS Grading Specs][css-grading-specs]
   - [React Project Grading and Presentation Process][grading-presentation]
   - [Design and Styling Resources][design and styling]
@@ -38,6 +39,7 @@ modules.
 
 <!-- project week -->
 
+[welcome-project]: ./project-week/README.md
 [css-grading-specs]: ./project-week/css-grading-specs.md
 [grading-presentation]: ./project-week/overview-of-react-project-grading-process.md.md
 [project-week]: ./project-week/README.md
