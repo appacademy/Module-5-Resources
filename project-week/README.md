@@ -1,9 +1,39 @@
 # Welcome to Module 5 Project
+<div align="center">
+   <img src="https://miro.medium.com/max/800/1*meCFnZ5MK_7Fu1ogYfBvNQ.png" style="width:25%"></img>
+   <img src="https://miro.medium.com/max/800/1*meCFnZ5MK_7Fu1ogYfBvNQ.png" style="width:25%"></img>
+   <img src="https://miro.medium.com/max/800/1*meCFnZ5MK_7Fu1ogYfBvNQ.png" style="width:25%"></img>
+</div>
 
-![React and Redux Logos](https://miro.medium.com/max/800/1*meCFnZ5MK_7Fu1ogYfBvNQ.png)
-> Guidelines for competing this project week!
 
-## Overview
+> Information and Guidelines for competing this project week!
+---------------------------------------------
+
+## Table of Contents:
+- [Overview](#overview)
+- [**Phase 1:** Authenticate Me & Project Proposals](#phase-1-authenticate-me--project-proposals)
+- [**Phase 2:** Project Time!](#phase-2-project-time)
+    - [Standups](#standups)
+    - [What is a good question?](#what-is-a-good-question)
+        - [Good Question Format](#good-question-format)
+- [**Feature CRUD**](#feature-crud)
+    - [First Feature](#for-your-first-feature)
+    - [Second Feature](#for-your-second-feature)
+- [**AirBnB**](#airbnb)
+    - [Basic Pages Needed](#basic-pages-needed)
+    - [Forms](#forms)
+- [**MeetUp**](#meetup)
+    - [Basic Pages Needed](#basic-pages-needed-1)
+    - [Forms](#forms-1)
+- [General Advice](#general-advice)
+- [**Phase 3:** Rolling Optional Pregrading](phase-3-rolling-optional-pregrading)
+    - [To be pregrade ready](#to-be-pregrade-ready)
+- [**Phase 4:** Monday Grading](#phase-4-monday-grading)
+- [Helpful Links/Resources](#helpful-links-resources-for-mod-5-project-week)
+
+--------------------------------------------------
+
+# Overview
 The Mod 5 Project is meant to assess your abilities to complete a frontend utilizing React, Redux, your Mod 4 custom API as the backend, JSX/HTML, and CSS in a week's time. All of these brought together for your *first full-stack project*! 🎉
 This project will be in your portfolio for showcasing your skills to future employers and recruiters. The aim is to have 4 features eventually (after graduation) but for this week the minimum to complete is **2 core features**.
 > If you start extra features, keep them on a separate branch until they are completed with full functionality. Incomplete features will need to be commented out for presentation and grading.
@@ -14,7 +44,7 @@ Presentations with your team and grading will occur on Monday morning, Week 17. 
 ![Bill Nye happy computer gif](https://media0.giphy.com/media/l3nWqD4ViFej9REAw/giphy.gif?cid=ecf05e47igpzk6ql1l16cjebsutwhnpzsrfllbidrgvcjwg2&rid=giphy.gif&ct=g)
 > Be aware that this is a living document and subject to updates and is not a comprehensive list--should be supplemented by reading the materials on aA Open.
 
-# Phase 1 - Authenticate Me & Project Proposals
+# Phase 1: Authenticate Me & Project Proposals
 Friday's homework had you start working on Authenticate Me Frontend.
 You will be continuing with the clone site you made in the Mod 4 backend project. Please read the **React Solo Project Expectations**, along with the other materials, on AAO.
 Please fill out and submit this [Mod 5 Project Proposal | Google Form](https://forms.gle/uz93a7oghJDgeGJY7) before EOD Friday!
@@ -192,7 +222,7 @@ Some advice on specific features:
 
 -------------------------------------
 
-# Phase 3 - Rolling Optional Pregrading
+# Phase 3: Rolling Optional Pregrading
 In Mod 5, pregrading is optional and done on a first-come-first-serve basis.
 During this week, once you are **pregrade ready**, you may reach out to your project lead to request a pregrade. You will be added to the list. These pregrades unfortunately take quite a bit of time because they must be graded by hand. Staff will most likely not be able to complete every pregrade that was requested. So, it is recconmended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for pregrades is before last break on Friday. Staff cannot pregrade over the weekend. 
 
@@ -208,7 +238,7 @@ During this week, once you are **pregrade ready**, you may reach out to your pro
 - testing all the errors you can think of on all your forms. (What edge cases are there? Try to erase data on your edit form, does it give errors too?)
 - walkthrough your site not logged in
 
-# Phase 4 - Monday Grading
+# Phase 4: Monday Grading
 On Monday, presentations will begin shortly after class begins with your group, led by your project advisor. Please check on your live site and reset your database (if neccesary) before class starts. If you are having problems, please let staff know immediately so we are aware. Grading occurs during your presentation but will not be complete until a bit later after presentations are done, so please be patient. 
 
 ### Grading and Presentation Requirements
@@ -218,7 +248,7 @@ On Monday, presentations will begin shortly after class begins with your group, 
 
 <hr />
 
-## Helpful Links Resources for Mod 5 Project Week
+# Helpful Links Resources for Mod 5 Project Week
 
 - [GitHub README and Wiki Guidelines](https://github.com/flow-state-15/mod-5-extra-resources/blob/main/project-week/github-README-and-wiki-guidelines.md)
 - [Whit's CSS Tips](https://docs.google.com/document/d/1VkeCDf12jokoTdriQycheyfnlfdc-qypDXsxCO5tqNk/edit?usp=sharing)
