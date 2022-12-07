@@ -46,7 +46,8 @@ Presentations with your team and grading will occur on Monday morning, Week 17. 
 
 # Phase 1: Authenticate Me & Project Proposals
 Friday's homework had you start working on Authenticate Me Frontend.
-You will be continuing with the clone site you made in the Mod 4 backend project. Please read the **React Solo Project Expectations**, along with the other materials, on AAO.
+You will be continuing with the clone site you made in the Mod 4 backend project. Please read the **React Solo Project Expectations**, along with the other materials, on AAO. In your project repo, make a `Redux Store Shape` Wiki Page; examples can be viewed [here](https://github.com/appacademy/Module-5-Resources/blob/main/assets/react-redux-state-shape.md).
+
 Please fill out and submit this [Mod 5 Project Proposal | Google Form](https://forms.gle/uz93a7oghJDgeGJY7) before EOD Friday!
 The fields it requires is:
 ```md
@@ -55,7 +56,8 @@ The fields it requires is:
 3. Github Repo Link: http://github.com/your-github-user/your-project-repo/
 4. Live Link: https://name-of-app.onrender.com
 5. Scorecard Link: https://docs.google.com/scorecard... (please see below for the link to create your scorecard)
-6. What is your second feature?
+6. Redux Store Shape Github Wiki Link: https://github.com/project-name/wiki/redux-store-shape
+7. What is your second feature?
 ```
 ### Scorecard Link
 Please create a scorecard for your project to submit in the proposal!
