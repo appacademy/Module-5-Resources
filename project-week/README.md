@@ -26,7 +26,7 @@
     - [Basic Pages Needed](#basic-pages-needed-1)
     - [Forms](#forms-1)
 - [General Advice](#general-advice)
-- [**Phase 3:** Rolling Optional Feature Review](phase-3-rolling-optional-feature-review)
+- [**Phase 3:** Rolling Optional Feature Review](#phase-3-rolling-optional-feature-review)
     - [To be feature review ready](#to-be-feature-review-ready)
 - [**Phase 4:** Monday Grading](#phase-4-monday-grading)
 - [Helpful Links/Resources](#helpful-links-resources-for-mod-5-project-week)
@@ -76,7 +76,7 @@ During your turn, share your screen (both code and the actual site) and discuss 
 
 **An important aspect of standups is that this is not a time for debugging.** We have a limited amount of time to make sure we get a read on everyone. Project advisors might have some quick advice about where a problem is most likely arising but you will be asked to formulate a good question to post on your online-questions channel.
 
-### What is a good question?
+### **What is a good question?**
 > "The effectiveness of being a Software Engineer can be proportional to your ability to ask effective questions." -- AAO
 
 This is probably the most important skill we try to teach you here at App Academy. Being able to articulate what is occurring, what you actually want to occur, and what you have narrowed down... will help you become a highly sought after programmer.
@@ -164,8 +164,7 @@ The gray or blue check means the question seems to have been resolved by a TA or
 - 404 Page
 
 ## Forms
-
-Some advice on specific features:
+> Some advice on specific features:
 #### Spots
 - **Create form needs to include a single preview image upload at least.**
 - **Edit form doesn't need to include the option to edit the previewImage.**
@@ -202,7 +201,7 @@ Some advice on specific features:
 - Create Modal for second feature
 - 404 Page
 ## Forms
-Some advice on specific features:
+> Some advice on specific features:
 #### Groups
 - **Create form needs to include a single previewImage upload at least.**
 - **Edit form doesn't need to include the option to edit the previewImage.**
@@ -219,16 +218,16 @@ Some advice on specific features:
 - NPM packages must be approved by your project advisor.
 - CSS frameworks are not allowed.
 - NOTE: **Programatic hard refreshes are not allowed**. This includes manipulating the url through the `window` object. React provides all the tools necessary for dynamic rerendering or window relocation. If you have to have to refresh the page to see your data this is an indication that your reducer/selector code is bugged.\
-- If you complete the two features, and are passing pregrading, continue to use this time to work on additional features, like we mentioned above, after graduation you will need at least 4 features to be "greenlit" to start applying to jobs.
+- If you complete the two features, had a *feature review*, and feel ready for Monday grading, continue to use this time to work on additional features, like we mentioned above, after graduation you will need at least 4 features to be "greenlit" to start applying to jobs.
 	- A great suggestion for implementation would be adding AWS for photo uploading instead of having users paste in URLs. (see resource links below for guides on this)
 
 -------------------------------------
 
-# Phase 3: Rolling Optional Pregrading
-In Mod 5, pregrading is optional and done on a first-come-first-serve basis.
-During this week, once you are **feature review ready**, you may reach out to your project lead to request a feature review. You will be added to the list. These feature reviews unfortunately take quite a bit of time because they must be reviewed by hand. Staff will most likely not be able to complete every feature review that was requested. So, it is recommended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for feature reviews is before last break on Friday. Staff cannot do feature reviews over the weekend. 
+# Phase 3: Rolling Optional **Feature Review**
+In Mod 5, *feature review* is optional and done on a first-come-first-serve basis.
+During this week, once you are **feature review ready**, you may reach out to your project lead to request a feature review. You will be added to the list. These unfortunately take quite a bit of time because they must be reviewed by hand. Staff will most likely not be able to complete every review that was requested. So, it is recommended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for a feature review is before last break on Friday. Staff cannot do feature reviews over the weekend. 
 
-## To be feature review ready:
+## To be **Feature Review Ready**:
 - All functionality must be working on all features you implemented with React/Redux working properly. (comment out code for incomplete extra features)
 - There must be validation/error handling on every form.
 - General layout and at least some styling needs to have been completed on every page you implemented.
@@ -236,12 +235,17 @@ During this week, once you are **feature review ready**, you may reach out to yo
 - You have walked through your app *thoroughly* searching for bugs and testing all inputs for any possibilities that could break your site.
 
 ## Basic Walkthrough Students should do:
-- create a new user and check every CRUD functionality on both features.
-- testing all the errors you can think of on all your forms. (What edge cases are there? Try to erase data on your edit form, does it give errors too?)
-- walkthrough your site not logged in
+- sign up a new user and test the site with the site with that account as well as your demo login.
+- check every CRUD functionality on both features.
+- test all the errors you can think of on all your forms.
+    - What edge cases are there?
+	- Try to erase data on your edit form, does it give errors, too?
+- walk through your site not logged in as well.
 
 # Phase 4: Monday Grading
-On Monday, presentations will begin shortly after class begins with your group, led by your project advisor. Please check on your live site and reset your database (if neccesary) before class starts. If you are having problems, please let staff know immediately so we are aware. Grading occurs during your presentation but will not be complete until a bit later after presentations are done, so please be patient. 
+On Monday, presentations will begin shortly after class begins with your group, led by your project advisor. Please check on your live site and reset your database (if necessary) before class starts. If you are having problems, please let staff know immediately so we are aware. Grading occurs during your presentation but will not be complete until a bit later after presentations are done, so please be patient.
+
+Before Monday, please go through the above [Basic Walkthrough Students should do.](#basic-walkthrough-students-should-do)
 
 ### Grading and Presentation Requirements
 
