@@ -26,8 +26,8 @@
     - [Basic Pages Needed](#basic-pages-needed-1)
     - [Forms](#forms-1)
 - [General Advice](#general-advice)
-- [**Phase 3:** Rolling Optional Pregrading](phase-3-rolling-optional-pregrading)
-    - [To be pregrade ready](#to-be-pregrade-ready)
+- [**Phase 3:** Rolling Optional Feature Review](phase-3-rolling-optional-feature-review)
+    - [To be feature review ready](#to-be-feature-review-ready)
 - [**Phase 4:** Monday Grading](#phase-4-monday-grading)
 - [Helpful Links/Resources](#helpful-links-resources-for-mod-5-project-week)
 
@@ -224,13 +224,13 @@ Some advice on specific features:
 
 # Phase 3: Rolling Optional Pregrading
 In Mod 5, pregrading is optional and done on a first-come-first-serve basis.
-During this week, once you are **pregrade ready**, you may reach out to your project lead to request a pregrade. You will be added to the list. These pregrades unfortunately take quite a bit of time because they must be graded by hand. Staff will most likely not be able to complete every pregrade that was requested. So, it is recconmended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for pregrades is before last break on Friday. Staff cannot pregrade over the weekend. 
+During this week, once you are **feature review ready**, you may reach out to your project lead to request a feature review. You will be added to the list. These feature reviews unfortunately take quite a bit of time because they must be reviewed by hand. Staff will most likely not be able to complete every feature review that was requested. So, it is recommended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for feature reviews is before last break on Friday. Staff cannot do feature reviews over the weekend. 
 
-## To be pregrade ready:
+## To be feature review ready:
 - All functionality must be working on all features you implemented with React/Redux working properly. (comment out code for incomplete extra features)
 - There must be validation/error handling on every form.
 - General layout and at least some styling needs to have been completed on every page you implemented.
-    - *CSS does not need to be absolutely completed/polished but majority of the work should be done; staff won't have time to give you a list of all the CSS that you need to fix so your pregrade not mentioning styling problems is not permission to not complete it.* 
+    - *CSS does not need to be absolutely completed/polished but majority of the work should be done; staff won't have time to give you a list of all the CSS that you need to fix on your feature review, so not mentioning styling problems is not permission to not complete it.* 
 - You have walked through your app *thoroughly* searching for bugs and testing all inputs for any possibilities that could break your site.
 
 ## Basic Walkthrough Students should do:
