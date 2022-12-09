@@ -293,6 +293,10 @@ Before Monday, please go through the above [Basic Walkthrough Students should do
 - [Sequelize Cascade Delete][sequelize-cascade-delete]
 - [Supplemental Authenticate Me Read Along][authenticate-me-read-along]
 
+-------------------------------------------------------------------------------------
+
+[⤴ Back to top](#welcome-to-module-5-project)
+
 <p align="right" style="font-size:10px">
   <a href="../README.md">Back to main README.md</a>
 </p>
