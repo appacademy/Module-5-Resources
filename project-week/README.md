@@ -55,17 +55,10 @@ The fields it requires is:
 2. Project Name: CloneBnB
 3. Github Repo Link: http://github.com/your-github-user/your-project-repo/
 4. Live Link: https://name-of-app.onrender.com
-5. Scorecard Link: https://docs.google.com/scorecard... (please see below for the link to create your scorecard)
 6. Redux Store Shape Github Wiki Link: https://github.com/project-name/wiki/redux-store-shape
-7. What is your second feature?
 ```
-### Scorecard Link
-Please create a scorecard for your project to submit in the proposal!
-#### [Mod 5 Scorecard](https://docs.google.com/spreadsheets/d/1f3zBqm5YVQt2hBFq7NwHCByDobCcCkg85poZsqfiHWU/edit?usp=sharing)
-1.  *File* > *Make a Copy*.
-2. Fill out the top right section, from *Developer* to *Live Link*.
-
 By Monday, you are expected to have completed Authenticate Me Frontend. This needs to be approved by your project advisor before you are allowed to move on to your features.
+
 # Phase 2: Project Time!
 > This week will consist of standups in the morning and working on your solo project the rest of the day. Technical questions should be asked on your questions slack channel. 
 ## Standups vs Question Asking
@@ -137,6 +130,7 @@ The gray or blue check means the question seems to have been resolved by a TA or
 - [ ] Must be a way to DELETE!
 
 ### For your second feature:
+> AirBnB first feature must be **Reviews**. Meetup first feature must be **Events**.
 - [ ] Must be a place to CREATE!
 - [ ] Must be a place to READ!
 - [ ] UPDATE is not required for this feature
@@ -144,7 +138,7 @@ The gray or blue check means the question seems to have been resolved by a TA or
 
 # AirBnB
 ![Airbnb logo banner](https://storage.googleapis.com/kaggle-competitions/kaggle/4651/media/airbnb_banner.png)
-> See AAO "React Project Assessment > Project List" for list of approved features for AirBnB.
+
 ### Basic Pages Needed
  - Home Page
  - Spot Details Page
@@ -158,7 +152,6 @@ The gray or blue check means the question seems to have been resolved by a TA or
 > Not required to pass but good to have eventually!
 - Profile Page
 	- User's Reviews
-	- User's Spots
 	- User's Bookings
 - Create Review as Modal
 - 404 Page
@@ -175,7 +168,6 @@ The gray or blue check means the question seems to have been resolved by a TA or
 
 # Meetup
 ![meetup logo banner](https://img.freepik.com/vector-premium/concepto-meetup-colegas-empresarios-personajes-empleados-empresa-pausa-cafe-personas-que-comunican-charlan-pasan-tiempo-libre-juntos-discuten-cuestiones-laborales-ilustracion-vectorial-dibujos-animados_87771-14282.jpg)
-> See AAO "React Project Assessment > Project List" for list of approved features for Meetup.
 ### Basic Pages Needed
  - Splash Page
  - Home Page
@@ -185,9 +177,9 @@ The gray or blue check means the question seems to have been resolved by a TA or
  - Group Details Page
  - Create Group Page or Modal
  - Edit Group Page or Modal
- - Event Details Page (if events is your second feature)
- - Create Event Page or Modal (if applicable)
- - Edit Event Page or Modal (if applicable)
+ - Event Details Page
+ - Create Event Page or Modal
+ - Edit Event Page or Modal
  ### Modals Needed
   - Sign Up Modal
  - Log In Modal
