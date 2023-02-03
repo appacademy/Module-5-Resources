@@ -70,10 +70,10 @@ During your turn, share your screen (both code and the actual site) and discuss 
 
 This is probably the most important skill we try to teach you here at App Academy. Being able to articulate what is occurring, what you actually want to occur, and what you have narrowed down... will help you become a highly sought after programmer.
 
-Functionally, here in Mod 5, there is a lot of interacting parts (Between React, JSX, CSS, Redux, your backend... etc.)  so debugging can be a lengthy process. For staff to be able to effectively assist everyone with problems, we need as much context given to us and groundwork already completed.
+Here in Mod 5 there is a lot of interacting parts (Between React, JSX, CSS, Redux, your backend... etc.), so debugging can be a lengthy process. For staff to be able to effectively assist everyone with problems, we need as much context given to us and groundwork already completed.
 **By groundwork we mean:**
 1. **Have you console.logged any variables/data you are dealing with?**
-	- Is it what you expected it to be? The right type? The right content?
+	- Are they what you expected them to be? The right types? The right content?
 2. **Have you narrowed down where the problem is happening in code? (Follow the dataflow!)**
 	- Example: you're not getting the right data in your thunk.
 		- So, go check your dispatch and payload in your component.
@@ -213,7 +213,8 @@ COMMENTED OUT SECTION ENDS HERE
 
 # Phase 3: Rolling Optional **Feature Review**
 In Mod 5, *feature review* is optional and done on a first-come-first-serve basis.
-During this week, once you are **feature review ready**, you may reach out to your project lead to request a feature review. You will be added to the list. These unfortunately take quite a bit of time because they must be reviewed by hand. Staff will most likely not be able to complete every review that was requested. So, it is recommended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for a feature review is before last break on Friday. Staff cannot do feature reviews over the weekend. 
+During this week, once you are **feature review ready**, you may reach out to your project lead to request a feature review. You will be added to the list. These unfortunately take quite a bit of time because they must be reviewed by hand. Staff will most likely not be able to complete every review that was requested. So, it is recommended to get base functionality and basic CSS done as early as possible to request before Friday. The cutoff for a feature review is before last break on Friday. Staff cannot do feature reviews over the weekend.
+> Please, if you are not **feature review ready** do not request one!
 
 ## To be **Feature Review Ready**:
 - All functionality must be working on all features you implemented with React/Redux working properly. (comment out code for incomplete extra features)
