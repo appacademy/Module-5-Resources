@@ -13,18 +13,10 @@
 - [Overview](#overview)
 - [**Phase 1:** Authenticate Me & Project Proposals](#phase-1-authenticate-me--project-proposals)
 - [**Phase 2:** Project Time!](#phase-2-project-time)
+    - [Wireframes & Acceptance Criteria](#wireframes--acceptance-criteria)
     - [Standups](#standups)
     - [What is a good question?](#what-is-a-good-question)
         - [Good Question Format](#good-question-format)
-- [**Feature CRUD**](#feature-crud)
-    - [First Feature](#for-your-first-feature)
-    - [Second Feature](#for-your-second-feature)
-- [**AirBnB**](#airbnb)
-    - [Basic Pages Needed](#basic-pages-needed)
-    - [Forms](#forms)
-- [**MeetUp**](#meetup)
-    - [Basic Pages Needed](#basic-pages-needed-1)
-    - [Forms](#forms-1)
 - [General Advice](#general-advice)
 - [**Phase 3:** Rolling Optional Feature Review](#phase-3-rolling-optional-feature-review)
     - [To be feature review ready](#to-be-feature-review-ready)
@@ -60,7 +52,11 @@ The fields it requires is:
 By Monday, you are expected to have completed Authenticate Me Frontend. This needs to be approved by your project advisor before you are allowed to move on to your features.
 
 # Phase 2: Project Time!
-> This week will consist of standups in the morning and working on your solo project the rest of the day. Technical questions should be asked on your questions slack channel. 
+> This week will consist of standups in the morning and working on your solo project the rest of the day. Technical questions should be asked on your questions slack channel.
+
+## Wireframes & Acceptance Criteria
+On aA Open, you will find the materials and information you need to complete your two features. Make sure to save the wireframes PDF for your project (either AirBnB or Meetup). Make sure to use both the wireframes and the acceptance criteria as you are building your app! A good suggestion is to copy and paste the criteria into a seperate document and check off things as you go. 
+
 ## Standups vs Question Asking
 ### Standups
 Standups usually occur during the mornings and before lunch, but the exact times will be posted on your team's slack channel by your project advisor. This is a time for us to see where you are at currently in your project and to see if you are reaching the goals you give yourself. An important skill to learn is prioritization and pacing.
@@ -118,7 +114,7 @@ The green check means that a TA or the student has confirmed that the question h
 The gray or blue check means the question seems to have been resolved by a TA or other student but is awaiting some form of confirmation.
 
 -------------------------
-
+<!-- OLD INFO BEFORE WIREFRAMES - COMMENTED OUT FOR NOW
 # Feature CRUD
 ### For your first feature:
 > AirBnB first feature must be **Spots**. Meetup first feature must be **Groups**.
@@ -201,12 +197,12 @@ The gray or blue check means the question seems to have been resolved by a TA or
 #### Events
 - **Create form needs to include a single previewImage upload at least.**
 
-------------------------------------
+------------------------------------ 
+COMMENTED OUT SECTION ENDS HERE
+-->
 
 ## General Advice
 - A demo user button is required! It is super useful to get this done ASAP for testing your app!
- - If you cannot view a part of your clone site because you would have to pay (like reviewing a spot or creating a group)
-	 - It does not have to be accurate to the site! Please copy the styling and format from the forms and pages you can see.
 - NPM packages must be approved by your project advisor.
 - CSS frameworks are not allowed.
 - NOTE: **Programatic hard refreshes are not allowed**. This includes manipulating the url through the `window` object. React provides all the tools necessary for dynamic rerendering or window relocation. If you have to have to refresh the page to see your data this is an indication that your reducer/selector code is bugged.\
