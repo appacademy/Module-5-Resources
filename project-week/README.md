@@ -6,7 +6,7 @@
 </div>
 
 
-> Information and Guidelines for competing this project week!
+> Information and Guidelines for completing this project week!
 ---------------------------------------------
 
 ## Table of Contents:
