@@ -246,7 +246,7 @@ Before Monday, please go through the above [Basic Walkthrough Students should do
 # Helpful Links Resources for Mod 5 Project Week
 
 - [GitHub README and Wiki Guidelines](https://github.com/flow-state-15/mod-5-extra-resources/blob/main/project-week/github-README-and-wiki-guidelines.md)
-- [Whit's CSS Tips](https://docs.google.com/document/d/1VkeCDf12jokoTdriQycheyfnlfdc-qypDXsxCO5tqNk/edit?usp=sharing)
+- [Whit's CSS Tips](https://docs.google.com/document/d/1JSoLJ0AU85fPNN6eYCarGtohcsjzLQKLiS-x_JiHmfA/edit?usp=share_link)
 - [Helpful Heroku Tips](https://github.com/whitnessme/helpful-heroku-tips)
 
 ### Project Resources
