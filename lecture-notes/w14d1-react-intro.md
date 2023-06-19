@@ -6,6 +6,12 @@ React is a library that creates your website HTML and manages its complex JavaSc
 
 From we will talk about how client side code, server side code, vanilla JavaScript and React interplay with each other the your development process.
 
+- me writing code in vscode is an example of a dev environment
+- code in a dev env is not real
+- write in dev, and ship to prod
+- dev tooling for react
+- dom manipulation is imperative programming
+  - more ways to write bugs
 ## Client Side vs Server Side environments
 - environments are the machine (or program or terminal) where your code is executed.
 - client side means your DOM is built by running JavaScript in the viewer's Browser engine (v8 for chrome)
