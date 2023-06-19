@@ -19,3 +19,5 @@ From we will talk about how client side code, server side code, vanilla JavaScri
 
 ## The differences between React and create-react-app
 - take your notes here
+- it scaffolds the project
+- hot reload dev server running on port 3000. WebSockets.
