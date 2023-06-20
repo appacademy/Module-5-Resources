@@ -9,6 +9,7 @@ const testElement = document.createElement("div")
 window.React = React
 window.testElement = testElement
 
+const banana = { green: "not great", yellow: "awesome!" }
 
 function App() {
   const [state, setState] = useState(0);
@@ -34,7 +35,148 @@ function App() {
         </button>
       </header>
       <br />
-      <Cards data={{ key: "value" }} />
+      <Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>
+      <div onClick={() => {}} key={"string"}>
+          this is jsx
+      </div>
+      
+      {/* {Array(20).fill("dollarbills").map((el, idx) => (<div key={idx}>
+        <h3>here is the element: {el}</h3>
+      </div>))} */}
+      {[
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+        (<Cards 
+        banana={banana}
+        onClick={() => {}}
+      >
+        <h2>I'm the h2 child</h2>
+        <h2>I'm the h2 child</h2>
+      </Cards>),
+      ]}
     </div>
   );
 }
