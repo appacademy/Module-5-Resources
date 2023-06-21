@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Cards from "./components/Cards";
+import ReactState from "./components/ReactState";
 import "./App.css";
 
 const testElement = document.createElement("div");
@@ -17,6 +18,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
+          <Route path="/count">
+            <ReactState />
+          </Route>
           <Route path="/cards">
             <Cards banana={banana} onClick={() => {}}>
               <h2>I'm the h2 child</h2>
