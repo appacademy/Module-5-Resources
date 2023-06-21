@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Cards from "./components/Cards";
 import ReactState from "./components/ReactState";
 import "./App.css";
+import Forms from "./components/Forms";
 
 const testElement = document.createElement("div");
 
@@ -18,6 +19,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
+          <Route path="/forms">
+            <Forms />
+          </Route>
           <Route path="/count">
             <ReactState />
           </Route>
