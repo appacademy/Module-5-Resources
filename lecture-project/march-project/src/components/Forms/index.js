@@ -38,6 +38,7 @@ export default function Forms(){
       />
       {errors.firstName && (<h5>{errors.firstName}</h5>)}
       <button disabled={!!errors.firstName}>submit</button>
+      <button type='button'>cancel</button>
 
     </form>
    )

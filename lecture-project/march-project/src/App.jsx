@@ -4,6 +4,7 @@ import Cards from "./components/Cards";
 import ReactState from "./components/ReactState";
 import "./App.css";
 import Forms from "./components/Forms";
+import Puppies from "./components/Puppies";
 
 const testElement = document.createElement("div");
 
@@ -19,6 +20,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
+          <Route path="/puppies">
+            <Puppies />
+          </Route>
           <Route path="/forms">
             <Forms />
           </Route>
