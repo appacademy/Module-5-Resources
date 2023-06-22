@@ -20,9 +20,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path="/puppies">
-            <Puppies />
-          </Route>
           <Route path="/forms">
             <Forms />
           </Route>
