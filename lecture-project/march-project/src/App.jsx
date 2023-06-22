@@ -4,7 +4,6 @@ import Cards from "./components/Cards";
 import ReactState from "./components/ReactState";
 import "./App.css";
 import Forms from "./components/Forms";
-import Puppies from "./components/Puppies";
 
 const testElement = document.createElement("div");
 
@@ -17,7 +16,7 @@ function App() {
   const [state, setState] = useState(0);
 
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
       <div className="App">
         <Switch>
           <Route path="/forms">
@@ -65,7 +64,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 
