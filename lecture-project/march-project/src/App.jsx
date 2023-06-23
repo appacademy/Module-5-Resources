@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Cards from "./components/Cards";
 import ReactState from "./components/ReactState";
 import "./App.css";
 import Forms from "./components/Forms";
+import PuppyList from "./components/Puppies/PuppyList";
+import PuppyDetails from "./components/Puppies/PuppyDetails";
 
 const testElement = document.createElement("div");
 
@@ -19,6 +21,12 @@ function App() {
     // <BrowserRouter>
       <div className="App">
         <Switch>
+          <Route path="/puppies/:breed">
+            <PuppyDetails />
+          </Route>
+          <Route path="/puppies">
+             <PuppyList />
+          </Route>
           <Route path="/forms">
             <Forms />
           </Route>

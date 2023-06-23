@@ -28,8 +28,31 @@
   color: #61dafb;
 }
 
-.card-container {
-  
+#puppy-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding-right: 2rem;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.puppy-card {
+  border: 2px dashed cornflowerblue;
+  margin: 1rem;
+  width: 11rem;
+  padding: 1rem;
+}
+
+.loading-div {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {
