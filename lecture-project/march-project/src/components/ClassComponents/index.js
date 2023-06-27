@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import dotenv from 'dotenv'
-dotenv.config()
 export default class ClassComponent extends React.Component {
   constructor(props) {
     super(props);

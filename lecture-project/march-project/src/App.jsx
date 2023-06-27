@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Cards from "./components/Cards";
 import ReactState from "./components/ReactState";
-import "./App.css";
 import Forms from "./components/Forms";
 import PuppyList from "./components/Puppies/PuppyList";
 import PuppyDetails from "./components/Puppies/PuppyDetails";
 import ClassComponent from "./components/ClassComponents";
+import "./App.css";
 
 const testElement = document.createElement("div");
 
