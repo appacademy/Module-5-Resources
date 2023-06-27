@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useCallback, useEffect, useReducer } from "react";
 import { data_shape } from "./api-data";
 
 export const ApiContext = createContext()
@@ -39,8 +39,35 @@ export default function ApiProvider(props){
   !! use a popular lib that created the architecture for you: Redux.
   */
 
+  //!! PUBLISH-SUBSCRIBE 
+
+  const reducer = useCallback((state, action) => {
+    switch(action.type){
+      case "add puppies": {
+        const newState = { ...state, puppies: action.payload }
+        return newState
+      }
+      default: return state
+    }
+  }, [])
+
+  const [store, dispatch] = useReducer(reducer, data_shape)
+
+  const actionCreator = useCallback((data) => ({
+    type: "add puppies",
+    payload: data
+  }), [])
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("https://dog.ceo/api/breeds/list/all")
+      const data = await res.json()
+      dispatch(actionCreator(data.message))
+    })()
+  }, [])
+
   return (
-    <ApiContext.Provider value={{}}>
+    <ApiContext.Provider value={store}>
       {props.children}
     </ApiContext.Provider>
   )

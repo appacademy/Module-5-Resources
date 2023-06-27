@@ -254,4 +254,5 @@ export const data_shape = {
     page: 2,
     size: 25,
   },
+  puppies: {}
 };
