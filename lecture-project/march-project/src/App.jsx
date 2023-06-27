@@ -6,6 +6,7 @@ import "./App.css";
 import Forms from "./components/Forms";
 import PuppyList from "./components/Puppies/PuppyList";
 import PuppyDetails from "./components/Puppies/PuppyDetails";
+import ClassComponent from "./components/ClassComponents";
 
 const testElement = document.createElement("div");
 
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/puppies">
              <PuppyList />
+          </Route>
+          <Route path="/classes">
+            <ClassComponent />
           </Route>
           <Route path="/forms">
             <Forms />
