@@ -1,13 +1,10 @@
 import { legacy_createStore as createStore, combineReducers, compose, applyMiddleware } from 'redux'
+import spotReducer from './spots'
 
 //!! dispatch({ type: "@@init" })
 
 const rootReducer = combineReducers({
-  spots: (state={ message: "yo i'm some content" }, action) => {
-    switch(action.type){
-      default: return state
-    }
-  },
+  spots: spotReducer,
   session: (state={ user: null }, action) => {
     switch(action.type){
       default: return state
