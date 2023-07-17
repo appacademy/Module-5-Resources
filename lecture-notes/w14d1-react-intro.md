@@ -32,8 +32,12 @@ We will talk about how client side code, server side code, vanilla JavaScript an
 ## The differences between React and create-react-app
 - take your notes here
 - React
-  - 
+  - The lib holds the core functions you need to manipulate the dom declaratively
+  - does not have all the functionality enterprise-level websites have
+  - is modified through extension libraries
+  - not a framework (complete package to do everything you need)
 - create-react-app
   - it scaffolds the project
   - hot reload dev server running on port 3000. WebSocket connection to dev server.
   - instant updates in browser
+  - sets up a dev environment for React
