@@ -22,22 +22,49 @@ export const actionReadSpot = (spots) => ({
   spots
 })
 
-// export const actionCreateSpot = (data) => ({
-//   type: CREATE_SPOT,
-//   payload: data
-// })
+//!! thunks -> the gateway to our backend api
+export const thunkCreateSpot = (spotFormData, images) => async (dispatch, getState) => {
+  // body of logic
+  // fetch
+  // modify fetch
+  // prepare data for the action creator
+  // dispatch creator
+  // send errors to component
 
-// export const actionCreateSpot = (data) => ({
-//   type: CREATE_SPOT,
-//   payload: data
-// })
+  const res = await fetch("/api/spots", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(spotFormData)
+  })
 
-// export const actionCreateSpot = (data) => ({
-//   type: CREATE_SPOT,
-//   payload: data
-// })
+  if(res.ok){
+    const spot = await res.json();
+    dispatch(thunkAddImageToSpot(images, spot))
+    return spot
+  } else {
+    const error = await res.json();
+    return error
+  } 
+}
 
-// thunks
+export const thunkAddImageToSpot = (images, spot) => async (dispatch, getState) => {
+  const res = await fetch(`/api/spots/${spot.id}/images`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(images)
+  })
+
+  if(res.ok){
+    const spot = await res.json();
+    dispatch(actionCreateSpot(spot))
+    return spot
+  } else {
+    const error = await res.json();
+    return error
+  } 
+}
+
+
 
 
 // reducer section

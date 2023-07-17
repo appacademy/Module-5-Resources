@@ -1,7 +1,12 @@
 import { useContext, useEffect, useState } from "react";
+import { useHistory } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import { UserContext } from "../../context/UserContext";
+import { thunkCreateSpot } from "../../store/spots";
 
 export default function Forms() {
+  const dispatch = useDispatch()
+  const history = useHistory()
   const userContext = useContext(UserContext);
   const [firstName, setFirstName] = useState("");
   const [errors, setErrors] = useState({});
@@ -18,11 +23,22 @@ export default function Forms() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const formData = {firstName}
+
     userContext.setValue({
       ...userContext,
       value: { ...userContext.value, formValue: { firstName } },
     });
     console.warn("testing submit, form value: ", firstName);
+
+
+    const newSpot = dispatch(thunkCreateSpot(formData, images))
+    if(newSpot.id){
+       history.push(`/my-spot-details/${newSpot.id}`)
+    } else {
+      setErrors(newSpot.errors)
+    }
 
     //!! send info to database
 
