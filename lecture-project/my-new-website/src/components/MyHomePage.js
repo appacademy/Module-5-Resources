@@ -5,19 +5,27 @@ export default function MyHomePage(){
 
   useEffect(() => {
     const getImage = async () => {
-      const res = await fetch("https://dog.ceo/api/breeds/image/random")
+      const res = await fetch("https://dog.ceo/api/breeds/list/all")
       const data = await res.json()
-      setPic(data.message)
+      const dataArr = Object.keys(data.message)
+      console.log(dataArr)
+      setPic(dataArr)
     }
     getImage()
     console.log(pic)
   }, [])
 
+
   return (
     <div>
       <span>yo howdy</span>
       <h3>hey a puppy!</h3>
-      <img src={pic}></img>
+      {/* <img src={pic}></img> */}
+      {pic && pic.map((breedName) => (
+        <div>
+          <h3>{breedName}</h3>
+        </div>
+      ))}
     </div>
   )
 }
