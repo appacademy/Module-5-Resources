@@ -23,7 +23,7 @@ export default function ReactStateHook(){
   }, [data])
 
   useEffect(() => {
-    
+    setData({ ...data })
   })
   console.log("", data)
 

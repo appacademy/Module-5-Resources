@@ -27,6 +27,10 @@ useState is the main way to provide state to a function component. It stores the
 
 This hook gives you access to React's component lifecycle. It is meant to run side effects in your code after the component updates from `useState`. They pair together very well. useEffect is mostly used to either run an effect when the component mounts or run an effect if a variable's reference in memory changes. It is not meant to replace generic helper functions.
 
+NOTE: ***use this hook to run side effects IF COMPONENT STATE CHANGES***.
+
+Since we are still writing JavaScript you can use normal JS techniques like helper functions to assist in DRYing up your code. Do not use `useEffect` for literally everything. It is not to be overused.
+
 - your notes here
 
 ---
