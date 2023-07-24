@@ -4,19 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
+import CatsProvider from './context/CatsProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Root = () => (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <CatsProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </CatsProvider>
 )
 
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Root />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
