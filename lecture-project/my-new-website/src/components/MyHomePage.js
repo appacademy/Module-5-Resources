@@ -14,8 +14,7 @@ export default function MyHomePage(){
     getImage()
     console.log(pic)
   }, [])
-
-
+  
   return (
     <div>
       <span>yo howdy</span>
