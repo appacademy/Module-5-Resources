@@ -1,5 +1,6 @@
 import { legacy_createStore as createStore, applyMiddleware, compose, combineReducers } from "redux";
-import fruitReducer from "./fruitReducer";
+import { thunk } from 'redux-thunk'
+import sessionReducer from "./session";
 
 // `combineReducers` combines all the reducer functions into one big reducer
 // function, which is typically called `rootReducer`. This is the most important
@@ -8,9 +9,9 @@ import fruitReducer from "./fruitReducer";
 
 // create rootReducer here:
 const rootReducer = combineReducers({
-  session: () => { return state }, //! 
-  spots: () => { return state },
-  reviews: () => { return state }
+  session: sessionReducer, //! 
+  spots: (state={}, action) => ({ allSpots: {}, singleSpot: {} }),
+  reviews: (state={}, action) => ({ user: [], spot: [] })
 });
 
 // `enhancer` allows you to alter the store and add functionality such as the
@@ -29,13 +30,14 @@ let enhancer;
 // Chrome extension for Redux DevTools will set up the DevTools in the browser.
 // (The checks in the conditional keep the Redux DevTools from breaking the app
 // if the app runs in a browser where the DevTools have not been installed.)
-if (process.env.NODE_ENV !== "production") {
-  const logger = require("redux-logger").default;
+if (process.env.NODE_ENV !== 'production') {
+  const logger = require('redux-logger').default;
   const composeEnhancers =
-    typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true })
-      : compose;
-  enhancer = composeEnhancers(applyMiddleware(logger));
+    typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true }) : compose;
+  enhancer = composeEnhancers(applyMiddleware(thunk, logger));
+} else {
+  enhancer = applyMiddleware(thunk);
 }
 
 // `createStore` creates a store object literal {}
