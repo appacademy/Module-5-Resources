@@ -51,3 +51,25 @@ const configureStore = (preloadedState) => {
 };
 
 export default configureStore;
+
+
+
+
+/*
+///! REDUX DATA FLOW 
+
+dispatch 
+-> action creator
+ -> loop over reducers
+  -> loop over selectors
+
+dispatch   //! ArticleInput.js ln 31
+-> thunk   //! ArticleInput.js ln 31
+-> inner thunk fn  //! ArticleInput.js ln 31
+-> fetch  //! articleReducer.js ln 25
+dispatch  //! articleReducer.js ln 33
+-> action creator  //! articleReducer.js ln 33
+ -> loop over reducers  //! articleReducer.js ln 33
+  -> loop over selectors  //! articleReducer.js ln 33
+
+*/

@@ -34,7 +34,7 @@ if(returnFromFetch.errors){
 
 // 3.  thunks
 // these functions hit routes
-export const thunkCreate = () => async (dispatch, getState) => {
+export const thunkCreate = () => async (dispatch) => {
   const res = await fetch("/api/groups");
   
   if(res.ok) {
