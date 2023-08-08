@@ -1,140 +1,44 @@
 ## Intro to React
 
-### - What are some downsides of Vanilla Dom Manipulation(VDM)
-- VDM is Imperative Programming
-- VDM requires you to write more code
-- More code leads to more bugs
-- VDM code is executed in the browser which limits its capabilities because of
-  browser security policies
+In Mod 3 you learned how to create basic webpages through HTML, CSS and vanilla JavaScript. In Mod 5 we will create advanced, interactive websites through the most popular frontend library, React.
 
-### - How is React different from VDM?
-- React is a declarative programming library
-- React functions do all of the VDM for you
-- Much of the code is internallized requiring you to write less
-- Less code leads to faster production
+React is a library that creates your website HTML and manages its complex JavaScript state. That's all it does. React needs extension libraries if you want additional features like routing between pages.
 
-### - The differences between React and create-react-app
-- React
-  - The lib holds the core functions you need to manipulate the dom declaratively
+We will talk about how client side code, server side code, vanilla JavaScript and React interplay with each other the your development process.
+
+## Vanilla DOM Manipulation(VDM) is Imperative Programming
+  - more code to write since you have to build functionality and state management from scratch
+  - more ways to write bugs
+  - DOM manipulation code is executed in the browser where it has access to the DOM for that tab. 
+  - JS executed in the browser is limited by browser's security policies complete browser and JS functionality can be accessed by loading the tab's sources from a Web Server
+
+## React is a Declarative Programming library.
+  - React functions do all of the vanilla dom manipulation for you, allowing you to write less code and produce content faster.
+  - React is used with JSX which allows you to write XML syntax in a JS file for very fast DOM building.
+  - Has built in local state management and basic global state
+  - No built in routing
+  - No built in Global State Management (GSM)
+
+## Build Tools
+
+These are programs used to bootstrap a frontend app quickly. They build a JS Module that includes React, a module bundler and JSX. Build tools do most of the heavy lifting in the background and allow you to scaffold a project quickly through a template project.
+
+Common build tools for React:
+
+- [create-react-app](https://create-react-app.dev/)
+- [Vite](https://vitejs.dev/guide/)
+
+## The differences between React and Build Tools
+React
+  - The library itself that holds the core functions you need to manipulate the dom declaratively
   - does not have all the functionality enterprise-level websites have
   - is modified through extension libraries
-  - not a framework (complete package to do everything you need)
-- create-react-app
-  - it scaffolds the project
-  - hot reload dev server running on port 3000. WebSocket connection to dev server.
-  - instant updates in browser
+  - not a framework
+
+Build Tools
+  - help scaffold a project (creates initial folders and files)
+  - creates a WebSocket server running on port 3000. WebSockets picks up changes in your code and sends the changes to the browser. This is hot reloading.
   - sets up a dev environment for React
+  - creates the project's Module and initial dependencies
 
-## Javescript POJO Review
 <a name="#readme-top"></a>
-
-
-
-These Learning Objectives are a supplement to App Academy Open and reinforce important concepts taught in Module 5.
-
-### How to destructure values from objects and arrays
-
-- `const { key } = object`
-- `const [ index1, index2 ] = array`
-
-Purpose:
-
-- Destructuring is used everywhere in React and other modern libraries/frameworks
-
-
-<br>
-<hr>
-
-### How to use ternaries
-
-- `<condition> ? <truthy return> : <falsey return>`
-
-Purpose:
-
-- To return different values depending on the outcome of the conditional expression
-
-
-
-<br>
-<hr>
-
-### How to use logical operators outside of boolean context
-
-- logical AND `<boolean> && <value to return>`
-- logical OR `<return if truthy> || <default value>`
-- nullish coalescing `<null or undefined returns other side> ?? <value to return>`
-
-Purpose
-
-- They return the first truthy value in the expression.
-- They are used for short-circuiting and conditional rendering.
-
-
-
-<br>
-<hr>
-
-### How to create new keys in objects:
-
-Variable as key:
-
-- `obj[variable] = value`
-
-String as a key:
-
-- `obj["string"] = value`
-- `obj.string = value`
-
-<br>
-
-
-<br>
-<hr>
-
-### How to remove keys from objects:
-
-- `delete object[key]`
-
-
-
-<br>
-<hr>
-
-### Know the difference between value types vs reference types in memory
-
-Value Types:
-
-- Variables are stored containing a literal value
-
-Reference Types:
-
-- Variables are stored as only a hexadecimal reference to the original object in memory that holds the value
-
-
-
-<br>
-<hr>
-
-### How to shallow copy vs deep copy an object
-
-Shallow copy:
-
-- `{...obj}`
-- `[...array]`
-
-Deep copy:
-
-- `JSON.stringify()` then `JSON.parse()`
-- This technique is the easiest way to deep copy, but it only works on JSON serializable data and literal values. For complex objects and references, you'll need a custom function that is possibly recursive. Best to use Lodash library.
-
-What are the differences between a shallow copy and a deep copy of an object?
-
-<br>
-
-
-
-<br>
-<hr>
-
-These concepts are used throughout Mod 5 with the expectation that you already know how to implement them. **Study them**.
-You **must** be fluent in the above concepts to succeed in this mod. Some are familiar to you, others not. No matter your current familiarity with the above concepts, take some time to look study them through Google, MDN or AppAcademy Open. Proficiency with these basics is absolutely vital to not only this Mod, but also your career.
