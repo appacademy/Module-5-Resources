@@ -1,17 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import "./App.css";
+
+const realDomNode = document.createElement("div");
+
+window.realDomNode = realDomNode;
 
 function App() {
-
-  var content = "hello from react!"
-
-
-  content = "howdy we modified this string (not really)"
-
+  
 
   return (
     <div className="App">
-      <h1>{content}</h1>
+      <nav>HI THIS IS THE NAV</nav>
+      <Switch>
+        <Route exact path={"/component"}>
+          <NewComponent />
+        </Route>
+        <Route exact path={"/"}>
+          <h1>yo this is the home page</h1>
+        </Route>
+        <Route>
+          <h1>Yo there's nothing here</h1>
+        </Route>
+      </Switch>
+    </div>
+  );
+}
+
+function NewComponent() {
+  return (
+    <div>
+      <h1>this is from the new component route</h1>
     </div>
   );
 }
