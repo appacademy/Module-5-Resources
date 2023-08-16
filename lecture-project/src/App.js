@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import Hooks from "./Hooks";
 import "./App.css";
 
 const realDomNode = document.createElement("div");
@@ -15,6 +16,9 @@ function App() {
       <Switch>
         <Route exact path={"/component"}>
           <NewComponent />
+        </Route>
+        <Route exact path={"/hooks"}>
+          <Hooks />
         </Route>
         <Route exact path={"/"}>
           <h1>yo this is the home page</h1>
