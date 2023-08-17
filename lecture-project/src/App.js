@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Hooks from "./Hooks";
 import "./App.css";
+import FormWithApi from "./FormWithApi";
 
 const realDomNode = document.createElement("div");
 
@@ -17,8 +18,14 @@ function App() {
         <Route exact path={"/component"}>
           <NewComponent />
         </Route>
+        <Route exact path={"/success"}>
+          <h1>Congrats you did it!</h1>
+        </Route>
         <Route exact path={"/hooks"}>
           <Hooks />
+        </Route>
+        <Route exact path={"/forms-with-api"}>
+          <FormWithApi />
         </Route>
         <Route exact path={"/"}>
           <h1>yo this is the home page</h1>
