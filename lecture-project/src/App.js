@@ -9,8 +9,6 @@ const realDomNode = document.createElement("div");
 window.realDomNode = realDomNode;
 
 function App() {
-  
-
   return (
     <div className="App">
       <nav>HI THIS IS THE NAV</nav>

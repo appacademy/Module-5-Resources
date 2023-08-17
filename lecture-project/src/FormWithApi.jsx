@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import { UserContext } from "./context/UserContext";
 
 const baseUrlPost = "https://apichallenges.herokuapp.com/todos";
 
@@ -9,9 +10,12 @@ export default function FormWithApi() {
   const [doneStatus, setDoneStatus] = useState("");
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState([]);
+  const UserContextValue = useContext(UserContext) // setter buried inside
 
   useEffect(() => {
     console.log("errors: ", errors);
+
+    UserContextValue.setUsername("yo thats an error")
   }, [errors]);
 
   const handleSubmit = async (e) => {
