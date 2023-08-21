@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Hooks from "./Hooks";
 import "./App.css";
 import FormWithApi from "./FormWithApi";
+import ClassComponent from "./ClassComponent";
 
 const realDomNode = document.createElement("div");
 
@@ -15,6 +16,9 @@ function App() {
       <Switch>
         <Route exact path={"/component"}>
           <NewComponent />
+        </Route>
+        <Route exact path={"/classes"}>
+          <ClassComponent newProp="this is a prop" />
         </Route>
         <Route exact path={"/success"}>
           <h1>Congrats you did it!</h1>
