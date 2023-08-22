@@ -4,6 +4,7 @@ import Hooks from "./Hooks";
 import "./App.css";
 import FormWithApi from "./FormWithApi";
 import ClassComponent from "./ClassComponent";
+import { ReduxSubscriber } from "./components/FunWithRedux";
 
 const realDomNode = document.createElement("div");
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <nav>HI THIS IS THE NAV</nav>
+      <ReduxSubscriber />
       <Switch>
         <Route exact path={"/component"}>
           <NewComponent />

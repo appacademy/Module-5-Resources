@@ -1,19 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { Provider as ReduxProvider } from 'react-redux'
+import { Provider as ReduxProvider } from 'react-redux';
 import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
-import "./index.css";
 import UserProvider from "./context/UserContext";
+import * as spotsFile from './redux/spots';
 import configureStore from "./redux";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const store = configureStore();
 
 window.store = store
+window.spotsFile = spotsFile
 
 const Root = () => {
   return (

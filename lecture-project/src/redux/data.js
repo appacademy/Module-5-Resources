@@ -27,7 +27,7 @@ const globalState = {
       previewImage: "image url",
     },
     2: {
-      id: 1,
+      id: 2,
       ownerId: 1,
       address: "123 Disney Lane",
       city: "San Francisco",
@@ -44,7 +44,7 @@ const globalState = {
       previewImage: "image url",
     },
     3: {
-      id: 1,
+      id: 3,
       ownerId: 1,
       address: "123 Disney Lane",
       city: "San Francisco",
@@ -61,7 +61,7 @@ const globalState = {
       previewImage: "image url",
     },
     4: {
-      id: 1,
+      id: 4,
       ownerId: 1,
       address: "123 Disney Lane",
       city: "San Francisco",
@@ -78,7 +78,7 @@ const globalState = {
       previewImage: "image url",
     },
     5: {
-      id: 1,
+      id: 5,
       ownerId: 1,
       address: "123 Disney Lane",
       city: "San Francisco",
