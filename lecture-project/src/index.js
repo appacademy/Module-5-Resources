@@ -1,21 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { Provider as ReduxProvider } from 'react-redux'
 import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
 import "./index.css";
 import UserProvider from "./context/UserContext";
+import configureStore from "./redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const store = configureStore();
+
+window.store = store
+
 const Root = () => {
   return (
-    <BrowserRouter>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </BrowserRouter>
+    <ReduxProvider store={store}>
+      <BrowserRouter>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </BrowserRouter>
+    </ReduxProvider>
   );
 };
 
