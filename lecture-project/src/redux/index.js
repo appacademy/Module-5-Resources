@@ -1,4 +1,5 @@
 import { legacy_createStore as createStore, applyMiddleware, compose, combineReducers } from "redux";
+import thunk from "redux-thunk"
 import spotReducer from "./spots";
 
 // `combineReducers` combines all the reducer functions into one big reducer
@@ -33,13 +34,13 @@ let enhancer;
 // Chrome extension for Redux DevTools will set up the DevTools in the browser.
 // (The checks in the conditional keep the Redux DevTools from breaking the app
 // if the app runs in a browser where the DevTools have not been installed.)
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV === "production") {
+  enhancer = applyMiddleware(thunk);
+} else {
   const logger = require("redux-logger").default;
   const composeEnhancers =
-    typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true })
-      : compose;
-  enhancer = composeEnhancers(applyMiddleware(logger));
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  enhancer = composeEnhancers(applyMiddleware(thunk, logger));
 }
 
 // `createStore` creates a store object literal {}

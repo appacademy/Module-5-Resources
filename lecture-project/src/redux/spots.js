@@ -4,24 +4,45 @@ const UPDATE_SPOT = "spot/UPDATEOneSpot";
 const DELETE_SPOT = "spot/DELETEOneSpot";
 
 // action creators
-export const actionCreateSpot = (spot) => {
+const actionCreateSpot = (spot) => {
   return { type: CREATE_SPOT, payload: spot };
 };
 
-export const actionUpdateSpot = (spot) => {
+const actionUpdateSpot = (spot) => {
   return { type: UPDATE_SPOT, payload: spot };
 };
 
-export const actionDeleteSpot = (id) => {
+const actionDeleteSpot = (id) => {
   return { type: DELETE_SPOT, id };
 };
+
+//!! THUNKS GO HERE
+export const thunkCreateSpot =
+  (dataFromReactComponent) => async (dispatch, getState) => {
+    const res = await fetch("https://127.0.0.1:9000/yo-hit-me!", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dataFromReactComponent),
+    });
+
+    if (res.ok) {
+      const data = res.json();
+
+      const action = actionCreateSpot(data);
+      // dispatch(action);
+      return data;
+    } else {
+      const errors = res.json();
+      return errors;
+    }
+  };
 
 //!! REDUCERS ARE PURE FUNCTIONS
 
 const initialState = { allSpots: {}, spotDetails: {} };
 
 export default function spotReducer(state = initialState, action) {
-  console.log("spot reducer running, action: ", action)
+  console.log("spot reducer running, action: ", action);
   switch (action.type) {
     case CREATE_SPOT: {
       // do the thing (modify state)
