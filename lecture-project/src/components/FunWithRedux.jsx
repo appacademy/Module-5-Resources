@@ -4,7 +4,7 @@ import {
   actionDeleteSpot,
   thunkCreateSpot,
 } from "../redux/spots";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function ReduxSubscriber() {
   const dataFromStore = useSelector((store) => store.spots.allSpots);
@@ -38,24 +38,30 @@ export function ReduxDispatcher() {
 
   const handleClick = async () => {
 
+    // collect data from form
+
     const results = await dispatch(
       thunkCreateSpot({ superDooperPooperScooper: null })
     );
 
-    if (results) {
+    if (results.message) {
       //!! failure
-      setErrors(results.message);
+      setErrors({ message: results.message });
     } else {
       //!! success
       // navigate away to appropriate page
     }
   };
 
+  useEffect(() => {
+    console.log("yo wtf man: ", errors)
+  }, [errors])
+
   return (
     <>
       <h2>Hi from the dispatcher!</h2>
-      {errors.length > 0 && (
-        <h1 style={{ color: "red" }}>{JSON.stringify(errors)}</h1>
+      {Object.values(errors).length > 0 && (
+        <h1 style={{ color: "red" }}>{errors.message}</h1>
       )}
       <button onClick={handleClick}>Hit the express app</button>
     </>

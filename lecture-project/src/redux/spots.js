@@ -19,7 +19,7 @@ const actionDeleteSpot = (id) => {
 //!! THUNKS GO HERE
 export const thunkCreateSpot =
   (dataFromReactComponent) => async (dispatch, getState) => {
-    const res = await fetch("https://127.0.0.1:9000/yo-hit-me!", {
+    const res = await fetch("http://127.0.0.1:9000/yo-hit-me!", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataFromReactComponent),
@@ -29,9 +29,10 @@ export const thunkCreateSpot =
       const data = res.json();
 
       const action = actionCreateSpot(data);
-      // dispatch(action);
+      dispatch(action);
       return data;
     } else {
+      console.warn("res in error: ", res)
       const errors = res.json();
       return errors;
     }
