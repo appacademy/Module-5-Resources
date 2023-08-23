@@ -6,11 +6,11 @@ We don't necessarily need to incorporate thunks in Redux just to use the library
 
 Thunks allow a function to be inserted into the normal Redux control flow. Before thunks, control flow roughly followed this invocation order: 
 
-`dispatch -> action creator -> reducers -> selectors -> rerenders`
+`action creator -> dispatch -> reducers -> selectors -> rerenders`
 
 With thunk middleware incorporated, additional functions get invoked:
 
-`dispatch -> thunk closure -> dispatch -> action creator -> reducers -> selectors -> rerenders`
+`outer thunk function -> dispatch -> inner thunk function -> request to api -> action creator -> dispatch -> reducers -> selectors -> rerenders`
 
 As we can observe, thunks are meant to be called before normal action creators. We use them as utility functions to execute tasks ***before*** we run reducers to change state. A great way to use them is to fetch data from an api that would then go into your normal action creator. This is the most common use case of a thunk.
 
