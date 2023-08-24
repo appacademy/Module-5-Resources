@@ -3,10 +3,14 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import morgan from "morgan";
 
+// create express app
 const app = express();
 
+// allows any client to send requests to this server (all origins)
 app.use(cors())
+// allows logging
 app.use(morgan("dev"))
+// allows express to parse json bodies
 app.use(bodyParser.json())
 
 app.post("/yo-hit-me!", (req, res) => {
@@ -15,13 +19,6 @@ app.post("/yo-hit-me!", (req, res) => {
   if(!superDooperPooperScooper) {
     // js error instances aren't directly stringifiable
     const err = new Error("we got a prob, bob")
-
-    console.log(JSON.stringify({
-      // error: err.name,
-      // message: new Array(10).fill("you are awesome!"),
-      // status: err.status,
-      error: "howdy"
-    }))
 
     return res.status(400).send({ message: ":(" })
   }
