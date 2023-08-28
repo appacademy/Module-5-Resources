@@ -5,6 +5,7 @@ import "./App.css";
 import FormWithApi from "./FormWithApi";
 import ClassComponent from "./ClassComponent";
 import { ReduxSubscriber } from "./components/FunWithRedux";
+import CssComponent from "./components/CssComponent";
 
 const realDomNode = document.createElement("div");
 
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route exact path={"/forms-with-api"}>
           <FormWithApi />
+        </Route>
+        <Route exact path={"/css"}>
+          <CssComponent />
         </Route>
         <Route exact path={"/"}>
           <h1>yo this is the home page</h1>
