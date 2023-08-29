@@ -1,37 +1,37 @@
 export default function CssComponent() {
   return (
-    <div id="root">
-      <div id="content">
-        <div id="info-section">
-          <h2>{staticData.name}</h2>
-          <div id="address-subsection">
-            <h5>{staticData.rating}</h5>
-            <span>"%C2%B7"</span>
-            <h5>{staticData.numReviews}</h5>
-            <span>"%C2%B7"</span>
-            <h5>{Object.values(staticData.location).join(",")}</h5>
-          </div>
-        </div>
-        <div id="image-container">
-          {staticData.images.map((link, idx) => (
-            <img key={idx} src={link} alt="spot" />
-          ))}
-        </div>
-        <div id="center-container">
-          <div id="description">{staticData.description}</div>
-          <div id="callout-box">
-            <button className="styled-button" id="reserve">reserve</button>
-          </div>
-        </div>
-        <div id="review-container">
-          {staticData.reviews.map((r, i) => (
-            <div id="review-container">
-              individual review container
-            </div>
-          ))}
+    <>
+      <div id="info-container">
+        <h2>{staticData.name}</h2>
+        <div id="address-subsection">
+          <h5>{staticData.rating}</h5>
+          {/* <span>{String.fromCharCode(183)}</span> */}
+          <span>*</span>
+          <h5>{staticData.numReviews}</h5>
+          {/* <span>{String.fromCharCode(183)}</span> */}
+          <span>*</span>
+          <h5>{Object.values(staticData.location).join(",")}</h5>
         </div>
       </div>
-    </div>
+      <div id="image-container">
+        {staticData.images.map((link, idx) => (
+          <img key={idx} src={link} alt="spot" className="image" />
+        ))}
+      </div>
+      <div id="center-container">
+        <div id="description">{staticData.description}</div>
+        <div id="callout-box">
+          <button className="styled-button" id="reserve">
+            reserve
+          </button>
+        </div>
+      </div>
+      <div id="review-container">
+        {staticData.reviews.map((r, i) => (
+          <div className="review-container">individual review container</div>
+        ))}
+      </div>
+    </>
   );
 }
 

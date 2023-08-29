@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <nav>HI THIS IS THE NAV</nav>
-      <ReduxSubscriber />
+      {/* <ReduxSubscriber /> */}
       <Switch>
         <Route exact path={"/component"}>
           <NewComponent />
