@@ -22,8 +22,8 @@ export default function State() {
 
   useEffect(() => {
     // slowest part of code
-    fetch("").then(() => {
-      return res => res.json()
+    fetch("httpstat.us/random/200,201,500-504").then((res) => {
+      return res.json()
     }).then((data) => {
       setState(data)
     }).catch((error) => {
