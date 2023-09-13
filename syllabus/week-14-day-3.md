@@ -29,8 +29,8 @@ An exception: you may call Hooks from custom Hooks: [custom hooks](https://react
 - functions live in the stack and function frame data is ephemeral
   - ref types declared in the function frame gets stored in heap memory, however
 - each render or re-render of the component is a new frame on the stack with new frame data and new variable instantiations
-- data could not be carried over from one function call to the next
-- `useState` stores slices in heap memory, getting around this problem
+- previous frame data is not carried over from one function call to the next
+- `useState` stores slices in heap memory and on every render returns object pointers, getting around this problem
 
 ## How `memory` references work in computer programming
 - take notes on `ref` vs `value` variables
