@@ -23,11 +23,11 @@ export default function State() {
   useEffect(() => {
     // slowest part of code
     fetch("").then(() => {
-
-    }).then(() => {
       return res => res.json()
-    }).catch((data) => {
+    }).then((data) => {
       setState(data)
+    }).catch((error) => {
+      console.log("there was a fetch error, error: ", error);
     })
   }, [])
 
