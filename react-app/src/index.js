@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
+import NiceProvider from "./context/NiceContext";
 import App from "./App";
 import "./index.css";
 
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const Root = () => {
   return (
     <BrowserRouter>
-      <App />
+      <NiceProvider>
+        <App />
+      </NiceProvider>
     </BrowserRouter>
   );
 };

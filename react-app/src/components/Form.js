@@ -1,15 +1,19 @@
+import { useContext } from "react";
 import { useState } from "react";
+import { NiceContext } from "../context/NiceContext";
 
 export default function Form() {
   const [somethingNice, setSomethingNice] = useState("");
-  const [result, setResult] = useState("");
   const [serverError, setServerError] = useState({ message: null });
+  const { setContextFormData, setContextStatus } = useContext(NiceContext);
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        sendToServer(url, setResult, setServerError);
+        setContextFormData(somethingNice);
+        sendToServer(url, setServerError, setContextStatus);
+        setSomethingNice("");
       }}
     >
       <div>
@@ -17,48 +21,42 @@ export default function Form() {
         <br />
         <input
           name="somethingNice"
-          type="url"
+          type="text"
           value={somethingNice}
           onChange={(event) => setSomethingNice(event.target.value)}
         />
       </div>
-      {serverError.message && (
-        <h5 style={{ color: "red" }}>{serverError.message}</h5>
-      )}
       <button type="button">Cancel</button>
       <button>Submit</button>
       <br />
-      <br />
-      {result && (
-        <img
-          style={{ maxWidth: "200px", maxHeight: "200px" }}
-          src={success}
-          alt="success"
-        />
+      {serverError.message && (
+        <span style={{ color: "red" }}>{serverError.message}</span>
       )}
     </form>
   );
 }
 
-function sendToServer(url, setSuccess, setError) {
+function sendToServer(url, setError, setContextStatus) {
   fetch(url)
     .then((res) => {
+      setContextStatus(res.status);
+      
       // if bad status code, send to catch
-      if (res.status >= 400) throw res;
+      if (res.status >= 400) {
+        throw res;
+      } else {
+        setError({ message: null });
+      }
       return res.text();
     })
     .then((data) => {
-      setError({ message: null })
-      setSuccess(data);
+      //not much to do with the data
     })
     .catch(async (error) => {
       // do something with error
-      const errorText = await error.text()
+      const errorText = await error.text();
       setError({ message: errorText });
     });
 }
 
-var success =
-  "https://gifdb.com/images/high/saitama-funny-eyebrows-up-d2zddr6q5ligpbie.gif";
-
-var url = "http://httpstat.us/random/200,201,401,403,400,500-504";
+var url = "http://httpstat.us/random/200,201,401,403,400";

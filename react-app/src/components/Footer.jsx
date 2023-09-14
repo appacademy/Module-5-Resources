@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { NiceContext } from "../context/NiceContext";
+
 const style = {
   position: "absolute",
   bottom: "0",
@@ -9,9 +12,11 @@ const style = {
 };
 
 export default function Footer() {
+  const { status } = useContext(NiceContext)
+
   return (
     <div id="footer" style={style}>
-      {false ? (
+      {status < 400 ? (
         <img
           src="https://gifdb.com/images/high/saitama-funny-eyebrows-up-d2zddr6q5ligpbie.gif"
           alt=""
