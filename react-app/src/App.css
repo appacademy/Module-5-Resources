@@ -22,6 +22,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+}
+
+#success-img {
+  height: 200px;
+  width: 200px;
 }
 
 .App-link {

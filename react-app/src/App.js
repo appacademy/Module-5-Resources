@@ -1,13 +1,14 @@
-import { useState } from "react";
-import State from "./components/State";
-import "./App.css";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
   return (
     <div className="App-header">
-      {/* <State /> */}
+      <Header />
       <Form />
+      <Footer />
     </div>
   );
 }
