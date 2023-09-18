@@ -11,7 +11,7 @@ export default function Header(props) {
       justifyContent: "center",
       alignItems: "center"
     }}>
-      <h1>{message ? message : "hey! say something nice!"}</h1>
+      <h2>{message ? message : "hey! say something nice!"}</h2>
     </div>
   );
 }
