@@ -1,9 +1,12 @@
 import { Switch, Route } from "react-router-dom";
+
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import "./App.css";
 import State from "./components/State";
+
+import "./App.css";
+import ClassComponents from "./components/ClassComponents";
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         </Route>
         <Route path={"/form"}>
           <Form />
+        </Route>
+        <Route path={"/classes"}>
+           <ClassComponents />
         </Route>
         <Route>
           <h3>Whatever route you're on is a 404, homie</h3>
