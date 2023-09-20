@@ -1,0 +1,8 @@
+{
+  "short_name": "Normalizing-data",
+  "name": "Normalizing Data",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,25 @@
+div {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+}
+
+a {
+  color: rgb(77, 74, 74);
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.active {
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  font-size: 1.2em;
+  background: rgb(240, 240, 179);
+  padding: 1px;
+}
+
+li {
+  color: rgb(77, 74, 74);
+}
