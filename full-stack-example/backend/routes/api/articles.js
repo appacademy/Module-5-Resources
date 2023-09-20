@@ -9,6 +9,12 @@ router.get('/', asyncHandler(async (_req, res) => {
   res.json(articles);
 }));
 
+router.get('/:id', asyncHandler(async (_req, res) => {
+  const { id } = _req.params
+  const article = await Article.findByPk(id);
+  res.json(article);
+}));
+
 router.post('/', validateCreate, asyncHandler(async (req, res) => {
   const article = await Article.create(req.body);
   res.json(article);

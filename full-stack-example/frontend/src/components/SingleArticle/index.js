@@ -1,18 +1,24 @@
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSingleArticle } from "../../store/articleReducer";
 import "./SingleArticle.css";
 
-const SingleArticle = ({ articles }) => {
+const SingleArticle = () => {
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const article = useSelector((store) => store.articleState[id]);
 
-  const singleArticle = articles[id];
-
-  // const singleArticle = articles.find(article => article.id === +id);
+  if (!article) {
+    dispatch(fetchSingleArticle(id));
+    return null;
+  }
 
   return (
     <div className="singleArticle">
-      <h1>{singleArticle?.title}</h1>
-      <img src={singleArticle?.imageUrl} alt={singleArticle?.title} />
-      <p>{singleArticle?.body}</p>
+      <NavLink to="/">Back to Article Home</NavLink>
+      <h1>{article.title}</h1>
+      <img src={article.imageUrl} alt={article.title} />
+      <p>{article.body}</p>
     </div>
   );
 };
