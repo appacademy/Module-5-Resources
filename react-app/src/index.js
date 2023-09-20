@@ -2,19 +2,27 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
+import { Provider as ReduxProvider } from "react-redux";
 
 import NiceProvider from "./context/NiceContext";
 import App from "./App";
 import "./index.css";
+import configureStore from "./redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const store = configureStore();
+
+window.store = store;
 
 const Root = () => {
   return (
     <BrowserRouter>
-      <NiceProvider>
-        <App />
-      </NiceProvider>
+      <ReduxProvider store={store}>
+        <NiceProvider>
+          <App />
+        </NiceProvider>
+      </ReduxProvider>
     </BrowserRouter>
   );
 };

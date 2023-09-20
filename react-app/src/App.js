@@ -1,12 +1,12 @@
 import { Switch, Route } from "react-router-dom";
 
+import ClassComponents from "./components/ClassComponents";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import State from "./components/State";
 
 import "./App.css";
-import ClassComponents from "./components/ClassComponents";
 
 function App() {
   return (
