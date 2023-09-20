@@ -4,7 +4,6 @@ import { fetchArticles } from "../../store/articleReducer";
 
 const ArticleList = () => {
   const dispatch = useDispatch();
-
   const articles = useSelector((state) => state.articleState);
 
   if (Object.keys(articles).length < 2) {

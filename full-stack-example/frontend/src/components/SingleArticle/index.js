@@ -17,6 +17,7 @@ const SingleArticle = () => {
     <div className="singleArticle">
       <NavLink to="/">Back to Article Home</NavLink>
       <h1>{article.title}</h1>
+      <h4>{article.author}</h4>
       <img src={article.imageUrl} alt={article.title} />
       <p>{article.body}</p>
     </div>
