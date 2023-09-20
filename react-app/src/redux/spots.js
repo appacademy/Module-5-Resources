@@ -12,6 +12,33 @@ export const actionReadAllSpots = (spots) => ({
   payload: spots,
 });
 
+// TODO: THUNKS
+export const thunkFetchAllSpots = () => async (dispatch, getState) => {
+  const res = await fetch("url", options)
+  if (res.status >= 400) {
+    // we have an error
+    // return false if broken
+    /*
+      {
+  "message": "Sorry, this spot is already booked for the specified dates",
+  "errors": {
+    "startDate": "Start date conflicts with an existing booking",
+    "endDate": "End date conflicts with an existing booking"
+  }
+}
+    */
+    const error = await res.json();
+    return error
+  } else {
+    // we have data
+    const data = await res.json()
+    dispatch(actionReadAllSpots(data.Spots))
+    return data
+  }
+  //!! TODO: tell the component the result of the request
+}
+
+
 // TODO: REDUCER FUNCTION
 const initialState = {};
 

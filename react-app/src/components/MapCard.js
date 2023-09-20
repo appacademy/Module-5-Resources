@@ -1,7 +1,7 @@
-export default function MapCard(props) {
+export default function MapCard({ oneThing }) {
   return (
     <div>
-      <span>the number is {props.num}</span>
+      <span>spot id is {oneThing.id}</span>
     </div>
   )
 }
