@@ -2,6 +2,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleArticle } from "../../store/articleReducer";
 import "./SingleArticle.css";
+import { useEffect } from "react";
 
 const SingleArticle = () => {
   const { id } = useParams();

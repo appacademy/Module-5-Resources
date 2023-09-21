@@ -38,6 +38,9 @@ export const writeArticle = (payload) => async (dispatch) => {
     const article = await response.json();
     dispatch(addArticle(article));
     return article;
+  } else {
+    const error = await response.json();
+    return error;
   }
 };
 

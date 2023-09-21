@@ -7,6 +7,7 @@ const ArticleInput = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [imageUrl, setImageUrl] = useState('');
+  const [errors, setErrors] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -18,8 +19,14 @@ const ArticleInput = () => {
       imageUrl
     };
 
-    const article = await dispatch(writeArticle(newArticle));
-    if (article) reset();
+    const result = await dispatch(writeArticle(newArticle));
+    if (result.errors) {
+      console.log(result)
+      // perform error handling here
+      setErrors(result.errors)
+    } else {
+      reset()
+    };
   };
 
   const reset = () => {
@@ -31,6 +38,13 @@ const ArticleInput = () => {
   return (
     <div className='inputBox'>
       <h1>Create Article</h1>
+      {errors.length > 0 && (
+        <ul>
+          {errors.map((e, idx) => (
+            <li key={idx}>{e}</li>
+          ))}
+        </ul>
+      )}
       <form onSubmit={handleSubmit}>
         <input
           type='text'

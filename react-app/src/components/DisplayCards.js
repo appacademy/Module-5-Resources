@@ -8,6 +8,7 @@ export default function DisplayCards() {
 
   if (!Object.keys(storeData) === 0) {
     // pseudocode
+    // handle promise from async thunk
     // we'd need an async function for await syntax here
     const resultOfFetch = await dispatch(thunkFetchAllSpots())
     if (resultOfFetch) {

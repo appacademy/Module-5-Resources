@@ -17,9 +17,15 @@ const body =
     .notEmpty()
     .withMessage('Body must contain text.');
 
+const author =
+  check('author')
+    .notEmpty()
+    .withMessage('No article author provided.');
+
 exports.validateCreate = [
   title,
   imageUrl,
   body,
+  author,
   handleValidationErrors,
 ];
