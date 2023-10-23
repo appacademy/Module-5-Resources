@@ -8,19 +8,22 @@ const ArticleList = () => {
 
   if (Object.keys(articles).length < 2) {
     dispatch(fetchArticles());
-    return null
+    return null;
   }
 
   return (
     <div>
       <h1>Article List</h1>
-      <ol>
-        {Object.values(articles).map(({ id, title }) => (
-          <li key={id}>
-            <NavLink to={`/article/${id}`}>{title}</NavLink>
-          </li>
+      <div className="cards-wrapper width-100">
+        {Object.values(articles).map(({ id, title, imageUrl }) => (
+          <div className="card">
+            <NavLink to={`/article/${id}`} key={id}>
+              <img src={imageUrl} alt="soething" className="card-img" />
+              <span>{title}</span>
+            </NavLink>
+          </div>
         ))}
-      </ol>
+      </div>
     </div>
   );
 };
