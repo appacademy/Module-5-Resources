@@ -30,23 +30,26 @@ const router = createBrowserRouter(
             <h2>oops that was an error :(</h2>
           </>
         }
-        ></Route>
+      ></Route>
       <Route
-        path="cats"
-        element={
-          <div>
-            <h2>
-              hi! <Link to="random">click me</Link> to see a random cute cat!
-            </h2>
-            <Outlet />
-          </div>
-        }
+        path="/cats"
         errorElement={
           <>
-            <h2>oops that was an error :(</h2>
+            <h2>oops that was an error somewhere in /cats routes :(</h2>
           </>
         }
-        >
+      >
+        <Route
+          index
+          element={
+            <div>
+              <h2>
+                hi! <Link to="random">click me</Link> to see a random cute cat!
+              </h2>
+              <Outlet />
+            </div>
+          }
+        />
         <Route
           path="random"
           errorElement={
