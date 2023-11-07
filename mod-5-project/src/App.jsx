@@ -1,36 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Outlet, createRoutesFromElements, createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <h1>this is the home page!</h1>
+      </div>
+    )
+  },
+  {
+    path: "/cats",
+    element: (
+      <div>
+        <h2>hi! <Link to="random">click me</Link> to see a random cute cat!</h2>
+        <Outlet />
+      </div>
+    ),
+    children: [
+      // {
+      //   path: "random",
+      //   element: (
+      //     <div>
+      //       <h1>you&apos;ve discovered the random cat page!</h1>
+      //       <img />
+      //     </div>
+      //   )
+      // },
+    ]
+  },
+  {
+    path: "/cats/random",
+    element: (
+      <h1>this is the alt /cats/random page</h1>
+    )
+  },
+  {
+    path: "*",
+    element: (<h1>yo this is the 404 page!</h1>)
+  },
+])
 
+function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-
-      <h2 onClick={(event) => { console.log("another hi mom!") }}>hi mom!</h2>
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <RouterProvider router={router} />
     </>
   )
 }
