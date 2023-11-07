@@ -1,3 +1,9 @@
+## For august '23. Complete fullstack data flow instructor talk.
+- All the moving parts of a website
+- The role of Mod 4's API
+- The role of SQL and databases
+- The role of Mod 5's React/Redux libraries
+
 ## Why we use React (review)
 - The entire code base is stored on the viewer's browser.
 - Reuseable components.
@@ -42,6 +48,18 @@ Syntax:
 Syntax:
 
 ```js
+// passing prop key/value pairs
+function App() {
+  const data = [1,2,3,4,5];
+  return (
+    <div>
+      <Component1 data={data} />
+      <Component2 data={data} />
+    </div>
+  )
+}
+
+// using prop key/value pairs
 function Component1(propsObject) {
   const { data } = propsObject;
   return <h1>{data}</h1>;
@@ -54,15 +72,23 @@ function Component2({ data }) {
 
 
 ## React Router
-- A library that keeps react components in sync with the url. It manages window location and dynamic route matching, and more.
-- **This curriculum uses React Router version 5**
-- Browser Router
-    - Primary component of the router that wraps your route hierarchy
-- Switches
-- Routes
-    - Path
-    - Exact
-    - Dynamic Paths
+React Router is the library React devs use to simulate conventional page routing on React websites, matching components to url paths. It manages window location and dynamic route segments(variables in your url), and more. The main components of the React Router system are:
+- `<RouterProvider router={router} />`
+  - Primary component of the router and is rendered in `App.jsx`
+- `createBrowserRouter()`
+  - takes an array of route objects
+- `createRoutesFromElements()`
+  - Takes in JSX component as arg
+  - Uses `<Route></Route>` component from react-router-dom
+  - Outputs an array of route objects for `createBrowserRouter`
+  - Familiar syntax for devs using older router versions
+- `loader={async ({ params }) => {}}`
+  - Enables us to read data from somewhere and provide it to the component loading on that route, before that component is rendered
+- `action={(request) => {}}`
+  - Enables us to capture non-GET requests from a route's component and do something with the response
+  - Overshadowed by Redux Thunk which you will learn next week
+
+There are other features of the Router like `<BrowserRouter></BrowserRouter>` and `<Routes></Routes>`, but these are support for legacy syntax and you shouldn't learn it on first exposure. The [Router docs](https://reactrouter.com/en/main/start/concepts) will help you use the library and discover additional features not mentioned by our program.
 
 Syntax:
 
@@ -86,9 +112,10 @@ function App({ data }) {
 
 ## `useParams()`
 
-- It enables you to extract wildcard variables from the browser's url.
+- It enables you to extract wildcard variables(dynamic route segments) from the browser's url.
 - `useParams()` returns an object with your route wildcard names as the key. We deconstruct the keys we need in our component.
-- The primary way we pass around `id`'s to routed components.
+- Dynamic route segments are the primary way we pass `id`'s to routed components.
+- Route segments can also be extracted within the `loader` functions.
 
 Syntax:
 
@@ -100,29 +127,23 @@ Syntax:
 
 ## What tools do you have to redirect a user?
 
-- Redirect component
-- useHistory hook
+- Navigate component
+- useNavigate hook
 - NavLink
 - Link
-- Nested Routes
-    - useRouteMatch Hook
-    - useLocation Hook
+- Return `redirect` in a loader
 
 Syntax:
 
 ```js
 function ProfileComponent({ user }) {
-  if (!user) return <Redirect to="/login" />;
+  if (!user) return <Navigate to="/login" />;
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push('/new/page');
+    navigate('/new/page');
   };
 }
 ```
-Data Flow Recap Lecture
-
-Top -> Down zoom in of a React website as a recap. Large picture to really small picture.
-React Router -> Props -> Component -> Hooks -> JSX
