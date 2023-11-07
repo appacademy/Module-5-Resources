@@ -1,6 +1,6 @@
 # Intro to the Virtual Dom, JSX and Routing
 
-**Your Lecture Notes**
+**Add Your Own Lecture Notes**
 
 ---
 
@@ -48,6 +48,7 @@ Add your own notes during the lecture.
 </Routes>
 ```
 
+- A helpful pattern with using the Router is to have a `<Layout />` element to use for your root route (usually "/"). This will enable you to create an easy `Header/Nav - Content - Footer` layout.
 - Application exception handling can be done in React Router too - just setup a component called `<ErrorBoundary />` and give it to the `errorElement` prop.
   - Errors will bubble up through your route tree until it meets a route with the `errorElement` prop and then it will render that error element. If you don't setup your own error handling, React Router will fallback to its default error component. 
 
