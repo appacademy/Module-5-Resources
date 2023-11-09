@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 import horoscopes from "../data/horoscopes";
 
 export const HoroscopeContext = createContext();
