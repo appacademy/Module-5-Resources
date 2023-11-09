@@ -43,16 +43,17 @@ An exception: you may call Hooks from custom Hooks: [custom hooks](https://react
 - Invoking the setter with a callback can solve some race conditions.
 - Hooks are batched. This means only one render will happen per state change. This is by design and a performance constraint.
 - **useState causes re-render of your component if you call its setter with a new reference in memory.**
-- **1 of only 2 hooks that can trigger React's Diffing Algorithm**
+- **1 of only 2 hooks that can trigger React's Render cycle**
 
 ## `useEffect()`
 
 - Used to run functions after state changed in your component.
 - useEffect callbacks (called 'effects') are invoked in order and managed by React's lifecycle algorithms.
-- All effects run **after** the component renders.
 - There are three timing configurations for useEffect.
 - useEffect's effects can optionally return a callback as a cleanup function.
-- will run if any refs in the dependency array are new
+- All effects in a component run after the component mounts.
+- New memory references in the dependency array will trigger useEffect to run again.
+- If effects are queued to run, effects will run ***after*** the component renders.
 
 ## Handling Form Errors
 

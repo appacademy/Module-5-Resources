@@ -90,25 +90,6 @@ React Router is the library React devs use to simulate conventional page routing
 
 There are other features of the Router like `<BrowserRouter></BrowserRouter>` and `<Routes></Routes>`, but these are support for legacy syntax and you shouldn't learn it on first exposure. The [Router docs](https://reactrouter.com/en/main/start/concepts) will help you use the library and discover additional features not mentioned by our program.
 
-Syntax:
-
-```js
-function App({ data }) {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route
-          exact
-          path="/profile/:userId"
-        >
-          <ProfileComponent data={data} />
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  );
-}
-```
-
 
 ## `useParams()`
 
