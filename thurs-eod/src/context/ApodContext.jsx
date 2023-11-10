@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const ApodContext = createContext();
+export const ApodContext = createContext();
 
 export default function ApodContextProvider(props) {
   const [apodObj, setApodObj] = useState({});
