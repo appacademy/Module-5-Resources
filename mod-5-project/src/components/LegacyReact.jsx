@@ -18,6 +18,21 @@ export default class LegacyReact extends React.Component {
     this.setState({ count: this.state.count + 1 })
   }
 
+  componentDidMount() {  // useEffect(() => {}, [])
+    console.log("component did mount")
+  }
+
+  componentWillUnmount() { // useEffect(() => { return () => {}}, [])
+    console.log("component is unmounting")
+  }
+
+  componentDidUpdate(prevProps, prevState) { // useEffect(() => {})
+    console.log(prevProps, prevState)
+    if(prevState.count !== this.state.count){
+      console.log("component did update")
+    }
+  }
+
   render() {
     return (
       <div>
