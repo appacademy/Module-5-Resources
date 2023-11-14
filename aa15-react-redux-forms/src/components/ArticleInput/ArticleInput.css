@@ -1,0 +1,39 @@
+form {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+div {
+  width: 50vw;
+}
+
+textarea {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+input {
+  margin-bottom: 20px;
+  height: 50px;
+  padding-left: 5px;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+button {
+  height: 40px;
+  width: 200px;
+  background: rgb(60, 56, 56);
+  color: rgb(255, 255, 255);
+  font-size: 1.1em;
+}
+
+button:hover {
+  cursor: pointer;
+}

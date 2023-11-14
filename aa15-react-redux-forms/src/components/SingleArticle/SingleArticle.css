@@ -1,0 +1,17 @@
+.singleArticle {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  border: 1px solid black;
+}
+
+hr {
+  border: 2px solid black;
+  width: 100%;
+}
+
+img {
+  border: 1px inset rgb(161, 158, 158);
+  background: rgb(161, 158, 158);
+  margin: 30px;
+}
