@@ -3,84 +3,160 @@
 The examples below are to provide suggestions and inspiration for designing
 your own redux store shapes.
 
-**There is not only one correct way to implement your Redux store shape.**
+**There are multiple correct ways to implement your Redux store shape.**
 
 Please feel free to deviate if it makes sense to you for your project.
 
-**Only implement slices of state as you need it.** Most of these examples are
-designed with 3+ features. Pick the parts you as you implement that feature.
+**Only implement slices of state as you need it.** These examples are
+designed with 3+ features. Pick the parts you need as you implement that feature.
 
 ## AirBnb Store Shape:
 
 ```js
 store = {
-  session: {},
+  session: { user: null },
   spots: {
-    // Notice there are two slices of state within spots. This is to handle your two different routes for getting a spot.
-    // Refer to your API Docs to get more information.
-    allSpots: {
-      [spotId]: {
-        spotData,
-      },
-      // These optional ordered lists are for you to be able to store an order in which you want your data displayed.
-      // you can do this on the frontend instead of in your slice is state which is why it is optional.
-      optionalOrderedList: [],
-    },
-    // Notice singleSpot has more data that the allSpots slice. Review your API Docs for more information.
-    singleSpot: {
-      spotData,
-      SpotImages: [imagesData],
+    // be sure to normalize your spot data
+    [spotId]: {
+      id: number,
+      ownerId: number,
+      address: string,
+      city: string,
+      state: string,
+      country: string,
+      lat: float,
+      lng: float,
+      name: string,
+      description: string,
+      price: float,
+      createdAt: string,
+      updatedAt: string,
+      numReviews: number,
+      avgRating: float,
+      SpotImages: [
+        {
+          id: number,
+          url: string,
+          preview: boolean,
+        },
+        {
+          id: number,
+          url: string,
+          preview: boolean,
+        },
+      ],
       Owner: {
-        ownerData,
+        id: number,
+        firstName: string,
+        lastName: string,
       },
     },
   },
-  // Again the idea here is two have separate slices for the different data responses you receive from your routes.
-  // For example, you could use each of these slices specifically for the component you are dealing with on the frontend.
+  // Again the idea here is to have separate slices for different categories of resources from your API. Organize your spot and user reviews how you see fit, but here is an example. An alternative would be nesting review data under `user` and `spot` slices, respectively.
   reviews: {
-    // When on a single spot, use the spot slice.
-    spot: {
-      [reviewId]: {
-        reviewData,
-        User: {
-          userData,
+    bySpot: {
+      [spotId]: [
+        {
+          id: number,
+          userId: number,
+          spotId: number,
+          review: string,
+          stars: number,
+          createdAt: string,
+          updatedAt: string,
+          User: {
+            id: number,
+            firstName: string,
+            lastName: string,
+          },
+          ReviewImages: [
+            {
+              id: number,
+              url: string,
+            },
+          ],
         },
-        ReviewImages: [imagesData],
-      },
-      optionalOrderedList: [],
+      ],
     },
     // When on the user's reviews, use the user slice.
-    user: {
+    byUser: {
       [reviewId]: {
-        reviewData,
+        id: number,
+        userId: number,
+        spotId: number,
+        review: string,
+        stars: number,
+        createdAt: string,
+        updatedAt: string,
         User: {
-          userData,
+          id: number,
+          firstName: string,
+          lastName: string,
         },
         Spot: {
-          spotData,
+          id: number,
+          ownerId: number,
+          address: string,
+          city: string,
+          state: string,
+          country: string,
+          lat: float,
+          lng: float,
+          name: string,
+          price: number,
+          previewImage: string,
         },
-        ReviewImages: [imagesData],
+        ReviewImages: [
+          {
+            id: number,
+            url: string,
+          },
+        ],
       },
-      optionalOrderedList: [],
     },
   },
   bookings: {
-    user: {
-      [bookingId]: {
-        bookingData,
-        Spot: {
-          spotData,
+    bySpot: {
+      [spotId]: [
+        {
+          User: {
+            id: number,
+            firstName: string,
+            lastName: string,
+          },
+          id: number,
+          spotId: number,
+          userId: number,
+          startDate: string,
+          endDate: string,
+          createdAt: string,
+          updatedAt: string,
         },
-      },
-      optionalOrderedList: [],
+      ],
     },
-    // Note here that your responses can actually be different here as well.
-    // HINT: What information should you see if you own this spot? (Refer to API Docs).
-    spot: {
-      [bookingId]: {
-        bookingData,
+    byUser: {
+      [spotId]: {
+        id: number,
+        spotId: number,
+        Spot: {
+          id: number,
+          ownerId: number,
+          address: string,
+          city: string,
+          state: string,
+          country: string,
+          lat: float,
+          lng: float,
+          name: string,
+          price: float,
+          previewImage: string,
+        },
+        userId: number,
+        startDate: string,
+        endDate: string,
+        createdAt: string,
+        updatedAt: string,
       },
-      optionalOrderedList: [],
     },
   },
 };
@@ -88,51 +164,148 @@ store = {
 
 ## MeetUp Store Shape:
 
+The Meetup projects can have a few variations of how the API data is organized. Again, organize in a way that feels natural but try to normalize where you can
+
 ```js
 store = {
-  session: {},
+  session: { user: null },
   groups: {
-    allGroups: {
-      [groupId]: {
-        groupData,
-      },
-      optionalOrderedList: [],
-    },
-    singleGroup: {
-      groupData,
-      GroupImages: [imagesData],
+    [groupId]: {
+      id: number,
+      organizerId: number,
+      name: string,
+      about: string,
+      type: string | boolean,
+      private: boolean,
+      city: string,
+      state: string,
+      createdAt: string,
+      updatedAt: string,
+      numMembers: number,
+      GroupImages: [
+        {
+          id: number,
+          url: string,
+          preview: boolean,
+        },
+        {
+          id: number,
+          url: string,
+          preview: boolean,
+        },
+      ],
       Organizer: {
-        organizerData,
+        id: number,
+        firstName: string,
+        lastName: string,
       },
-      Venues: [venuesData],
+      Venues: [
+        {
+          id: number,
+          groupId: number,
+          address: string,
+          city: string,
+          state: string,
+          lat: float,
+          lng: float,
+        },
+      ],
+      // It would make sense to add a `Members` key here for when you get that data
+      Members: [
+        {
+          id: number,
+          firstName: string,
+          lastName: string,
+          Membership: {
+            status: string,
+          },
+        },
+        {
+          id: number,
+          firstName: string,
+          lastName: string,
+          Membership: {
+            status: string,
+          },
+        },
+        {
+          id: number,
+          firstName: string,
+          lastName: string,
+          Membership: {
+            status: string,
+          },
+        },
+      ],
     },
   },
   events: {
-    allEvents: {
-      [eventId]: {
-        eventData,
-        Group: {
-          groupData,
-        },
-        Venue: {
-          venueData,
-        },
-      },
-    },
-    // In this slice we have much more info about the event than in the allEvents slice.
-    singleEvent: {
-      eventData,
+    [eventId]: {
+      id: number,
+      groupId: number,
+      venueId: number,
+      name: string,
+      description: string,
+      type: string,
+      capacity: number,
+      price: float,
+      startDate: string,
+      endDate: string,
+      numAttending: number,
       Group: {
-        groupData,
+        id: number,
+        name: string,
+        private: boolean,
+        city: string,
+        state: string,
       },
-      // Note that venue here will have more information than venue did in the all events slice. (Refer to your API Docs for more info)
       Venue: {
-        venueData,
+        id: number,
+        address: string,
+        city: string,
+        state: string,
+        lat: float,
+        lng: float,
       },
-      EventImages: [imagesData],
-      // These would be extra features, not required for your first 2 CRUD features
-      Members: [membersData],
-      Attendees: [attendeeData],
+      EventImages: [
+        {
+          id: number,
+          url: string,
+          preview: boolean,
+        },
+        {
+          id: number,
+          url: string,
+          preview: boolean,
+        },
+      ],
+      // It would make sense to add `Attendees` key here for when you get that data.
+      Attendees: [
+        {
+          id: number,
+          firstName: string,
+          lastName: string,
+          Attendance: {
+            status: string,
+          },
+        },
+        {
+          id: number,
+          firstName: string,
+          lastName: string,
+          Attendance: {
+            status: string,
+          },
+        },
+        {
+          id: number,
+          firstName: string,
+          lastName: string,
+          Attendance: {
+            status: string,
+          },
+        },
+      ],
     },
   },
 };
