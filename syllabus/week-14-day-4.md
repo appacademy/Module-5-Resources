@@ -6,12 +6,12 @@ Week 14 Day 4: React Context
 
 ## What is React Context?
 
-- Previously, the only way to pass information from one component to another was through props or `useParams`.
-- Context is a component that stores data and makes it available to all child components. Components can subscribe to this data through the `useContext` hook.
-- The Context component itself is the Provider, and components that subscribe to context data are called Consumers.
-- The Provider component accepts a mandatory prop called value which is usually an object, but you can assign it to anything.
+- So far, we've taught to pass information from one component to another through props or `useParams`.
+- Context is a built-in React API that stores data and makes it available to all child components. Components can subscribe to this data through the `useContext` hook.
+- The Context object has a component named `Provider`, and components that subscribe to context data are called Consumers.
+- The Provider component accepts a m**andatory prop called value** which is usually an object, but you can assign it to anything.
 - A React application can have many Context components that do specific things. It is common to see production applications with Contexts for themes, user auth data, language settings and other kinds of global data.
-- React's Context API is purely a prop injection system. It does not give you a way to manage the value. You have to design that part yourself.
+- React's Context API is purely a prop injection system - not a global state manager. It does not give you a way to manage the value. You have to design that part yourself. However, C**ontext is your introduction to the pattern of Global State in frontend architecture**.
 
 ## Custom context provider (dynamic provider)
 
