@@ -1,16 +1,17 @@
 import { useState } from "react";
 
 import { useHelperFunction } from "./hooks"
+import UseEffect from "./UseEffect";
 
 function App() {
   // const [validCount, setValidCount] = useState(0);
-  const [validCount, setValidCount] = useHelperFunction({ count: 0 });
+  // const [validCount, setValidCount] = useHelperFunction({ count: 0 });
   
   let invalidCount = 0;
   
   return (
     <div>
-      {console.log("rerendering")}
+      {/* {console.log("rerendering")}
       <h2>invalid count: {invalidCount}</h2>
       <h2>valid count: {validCount.count}</h2>
       <h2></h2>
@@ -32,7 +33,9 @@ function App() {
         setValidCount(altNewRef)
         console.log("validCount", newRef)
         // console.log("mutated old ref: ", validCount)
-      }}>test valid count</button>
+      }}>test valid count</button> */}
+
+      <UseEffect />
 
     </div>
   )
