@@ -1,0 +1,16 @@
+:root {
+    --error-msg-color: red;
+    --error-font-size: 12px
+}
+
+.error {
+    color: var(--error-msg-color);
+    font-size: var(--error-font-size);
+    height: 15px;
+    width: 220px;
+    margin: 3px;
+}
+
+ul {
+   list-style: none; 
+}
