@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import { useHelperFunction } from "./hooks"
 import UseEffect from "./UseEffect";
+import ReactForms from "./ReactForms";
 
 function App() {
   // const [validCount, setValidCount] = useState(0);
@@ -35,7 +36,7 @@ function App() {
         // console.log("mutated old ref: ", validCount)
       }}>test valid count</button> */}
 
-      <UseEffect />
+      <ReactForms />
 
     </div>
   )
