@@ -18,7 +18,7 @@ export default class Classes extends React.Component {
 
   handleClickFatArrow = () => {
     // console.log("this: ", this);
-    this.setState((previousSlice) => ({ count: this.state.count + 1 }), () => console.log("howdy!"));
+    this.setState(() => ({ count: this.state.count + 1 }), () => console.log("howdy!"));
   };
 
   componentDidMount() {
