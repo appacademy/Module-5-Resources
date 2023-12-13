@@ -1,0 +1,23 @@
+h1+* {
+  border: 4px dashed black;
+  padding: 12px;
+}
+
+li>* {
+  margin: 4px;
+}
+
+ul+* {
+  margin: 20px;
+}
+
+section>* {
+  display: block;
+  margin: 8px 0;
+}
+
+form>* {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+}

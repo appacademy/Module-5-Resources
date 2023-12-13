@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "improvement": "Dang, I wish I knew Redux as well as Brad. Also, I need to get better at JavaScript.",
+    "understanding": "Confident I understand everything."
+  },
+  {
+    "id": 2,
+    "improvement": "Golly, I wish I knew JavaScript as well as Luke. Also, I need to get better at Git.",
+    "understanding": "Confident I understand all."
+  },
+  {
+    "id": 3,
+    "improvement": "Golly, I wish I knew React as well as Tyler. Also, I need to get better at Redux.",
+    "understanding": "Confident I understand all."
+  },
+  {
+    "id": 4,
+    "improvement": "Wow, I wish I knew SQL as well as Todd. Also, I need to get better at Jest.",
+    "understanding": "Extremely comfortable. It's easy. Would ace the assessment."
+  },
+  {
+    "id": 5,
+    "improvement": "Geez, I wish I knew Sequelize as well as Winston. Also, I need to get better at ES5.",
+    "understanding": "Extremely comfortable. It's easy. Would ace the assessment."
+  }
+]
