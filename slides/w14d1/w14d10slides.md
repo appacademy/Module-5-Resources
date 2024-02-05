@@ -1,377 +1,241 @@
+
+
 <style>
     .present {
         text-align: left;
     }
-    img {
-        height: 300px;
+    img[alt=set_operations] {
+        width: 60%;
+        
     }
 </style>
 
 ---
 
-###### tags: `Week 14` `W14D2`
+###### tags: `Week 14` `W14D1`
+
+---
+
+# Welcome to Module 5!
+## Learning React
+- and Redux too...
 
 
 ---
 
-## Week 14 Day 2
-
-### How we doing?
-- How was homework?
-- How are we feeling about React so far?
+## Congrats on completing the Module 4 Project!
+### Pass or fail, you made your first production server!  Be proud!
 
 
 ---
 
-## Week 14 Day 2 Topics
+## Meet the Team!
 
-- Vite
-- React Basics (review from yesterday's content)
-- React Router
-- 
-
-
----
-
-## Vite!
-- Vite is what we will use to build a react front end from scratch
-- https://vitejs.dev/
-- Vite is only for development!
-
-```terminal
-npm create vite@latest <project-name> -- --template react
-
-npm install
-
-npm run dev
-```
-
-___
-
-## More Vite Setup - linting
-
-- We want to set up ESlinting for our applications to run automatically
-- Lets head to the walkthrough for details (maybe run the below command to start)
-
-
-```terminal
-npm install -D vite-plugin-eslint
-```
-
----
-
-## Lets look at that App.jsx
-
-- its our first component, awwwwwww 🥺
-- lets talk about whats going on, then
-- lets clear it out and start building our own app!
+- Brad Simpson - Module Lead
+- Keegan Abley - Module Assistant
+- Jefferson Garcia - JIA
 
 
 ---
 
-## Patchstagram,an Instagram Clone
+## Mod 5 Repo
+### https://github.com/appacademy/Module-5-Resources.git
 
-![patch](https://res.cloudinary.com/app-academy4/image/upload/v1647291502/Patchstagram/patch_hd_riobbp.png)
 
-- we will build this front end in pieces together over the next 2 weeks
-- many of the practices will have some pieces we can relate to our Patchstagram front end
-- some practices we will just directly discuss
+---
+
+## Mod 5 - The Hardest Module???
+
+- 7 days teaching -> 2 Frameworks (React & Redux)
+- Week 16 - Solo fullstack project
+- Visual module, you are going to see stuff in the browser!
+
+
+---
+
+### Deferrals are okay and this is the mod to have one...
+
+- Communicate with us if you are struggling or we might not know
+
+
+---
+
+## Do your homework! (pretty pretty please 🙏)
+- There is a significant amount, but it is really important
+- Do the homework practices, they will help make sure the concepts in the readings stick
 
 
 
 ---
 
-## Components!
+## What lies ahead...
 
-- App.jsx is our first!
-- Typically we want a component to have its own file
-- Capitalized Function
-- Returns 1 JSX elemement (1 parent)
-- There will be many many more to come...
+### Week 14
+- React Basics (components, props, router, hooks, state, context)
+### Week 15 
+- W14 Assessment (only one in Module 5)
+- Class Based React & Redux
+### Week 16 
+- Solo Full Stack Project - build a front end for your Mod 4 project!
+
+
+---
+
+## Week 14 Details
+
+- Day 1 - Intro to React, self study
+- Day 2 - Basics and React Router
+- Day 3 - useState and useEffect
+- Day 4 - Context (global state)
+- Day 5 - Study Day!
+ 
+note: if you write like this, its not shown in the slides
+
+---
+
+## What is React?
+
+- Lets see what the docs say?  https://react.dev/
+- "React lets you build user interfaces out of individual pieces called components."  
+
+---
+
+### From the HW reading (oh no there was homework???)
+
+- "React is a library that manages the creation and updating of DOM nodes in your web page. It does not do AJAX. It does not do services. It does not do local storage. It does not provide a pretty CSS framework for you. It just dynamically renders stuff into the DOM."
+
+
+---
+
+## What sites use React? (there are a lot...)
+- https://medium.com/@coderacademy/32-sites-built-with-reactjs-172e3a4bed81
+
+
+---
+
+## Request / Respose Cycle
+
+![request-reponse-cycle](https://miro.medium.com/v2/resize:fit:720/format:webp/1*OMhE9T_tuC0pUoZyWKWSnQ.png)
+
+### Lets look at a server...
+
+---
+
+## How does React fit in to this cycle?
+
+- Our Frontend or client lives in our backend or server...
+- First request to the server sends react to the browser so we can use it
+
+
+---
+
+## How does React work?
+### Lets draw some happy little trees...
+
+![bob-ross](https://fivethirtyeight.com/wp-content/uploads/2014/04/bob-ross.jpg?w=575)
+
+
+---
+
+## Virtual DOM
+
+![v-dom](https://media.geeksforgeeks.org/wp-content/uploads/20230725135348/Browser-DOM-Virtual-DOM-copy.webp)
+
+
+---
+
+## What's this JSX thingy?
+-  JavaScript eXtension  JSX
+-  Lets us write HTML in our JavaScript files using a dependancy called babel
+
+
+---
+
+## What is a "React Component"
+
+- function with a title/capital cased name
+- must return only 1 JSX element (which looks like HTML)
 
 ```jsx
-function Post() {
+export default function Component() {
+    
     return (
         <div>
-            <h2> Post content goes here! </h2>
+            Some stuff
         </div>
     );
 }
-export default Post;
-```
-
----
-
-## More on Components
-
-- we need to render/display them somewhere...
-- most of the time we will a self closing tag
-- its possible to have a component with a closing tag, but not common (usually a wrapper)
-
-
-```jsx!
-import Post from "./components/Post"
-
-function App() {
-    return (
-        <>
-            <Post />
-        </>
-    )
-}
 ```
 
 
 ---
 
-## Image Tags
+## Other things about components...
 
-- need to set a src attribute (nothing new i know)
-- can import the file into the component
-```jsx!
-import patchImage from "./assets/cat-image.png"
-    return (
-        <img src={ patchImage } alt="cute-cat" />
-    )
-```
-- can also referece the image name if in the public folder
-```jsx
-<img src="./cat-image.png" alt="cute-cat"/>
-```
-- we would use the above syntax if using an external url as well
-- don't forget to set an alt attribute!
-
----
-
-## CSS... (ewww CSS)
-
-- we do need to know how to add css to our components
-- if we want to add a file for CSS
-```jsx
-import "./App.css"
-
-    <img className="main-cat-image" />
-```
-- generally best to use classes over ids in components
-- inline we can use the style attribute, but we need to use double curlies
-```jsx
-  <img style={{"height": "300px"}} src="..." />
-```
-
----
-
-## Breaktime!
-### See ya back in 5 min 
-### When we come back, topics will be...
-
-- props
-- lists
-- events
-- routing 
-
----
-
-
-## 🙌 Props! 🙌
-
-- we can pass information from a parent to a child component (we can NOT do child to parent)
-- we call these props
-- they are key value pairs we define on the component where it is called/rendered
-- special prop called props.children
-- destructing is cool
-- spreading works too, but please don't :pray: 
+- can have props (parameters)
+- can have child components
+- most are potentially reusable (prolly not App but most others)
+- can have fron end routing, making choices on which components to render
 
 
 ---
 
-## Passing Props
-
-- in the parent...
-```jsx
-function App() {
-    const postTitle = "Check out that cat napping!"
-    return (
-        <>
-            <Post title={ postTitle } />
-        </>
-    )
-} 
-```
-- in the child component
-```jsx
-function Post(props){
-    return (
-        <div>
-            <h3>{ props.title }</h3>
-        </div>
-    )
-}
-```
-
-
----
-
-## Prop Threading (or "drilling")
-
-- passing data down multiple levels of components using props
-- it's not "bad" but as our apps grow and the levels of the tree grow, it can be very confusing to pass a prop down 5-8 levels
-- there is a better way, where we can skip levels called context, but thats a Thursday thing
-
-![props-drilling](https://miro.medium.com/v2/resize:fit:640/format:webp/1*l8L4O2GM6tUw1m6fz3FN-g.jpeg)
-
-
----
-
-## Wrapper Component
-
-- make use of props.children
-- this will be whatever content is between the parents opening and closing tags
-
-```jsx
-<PurpleWrapper>
-    <OtherComponent />
-</PurpleWrapper
-```
-
-```jsx
-function PurpleWrapper(props) {
-  console.log(props)
-  return (
-    <div style={{"color": "purple"}}>
-      { props.children }
-    </div>
-  );
-}
-```
-
-
----
-
-## Lists 
-
-- we can use our best buddy .map to iterate over an array of data
-- need to set a key attribute, this help's react with rendering the list
-- like with our component returns, there has to be a single parent returned
-
-```jsx
- { someData.map((postData) => (
-    <Post key={ postData.postNum } data={ postData } />
-    ))
- }
-```
+## How to make a new react project
+- Create React App depricated
+- Vite is the new way!   
 
 
 ---
 
 
-## onClick & handleClick (events)
+## Don't forget your JS
 
-- we handle our event by attributes on the html tag (onCLick, onChange, onSubmit)
-- we do not want to invoke our handleClick in the onClick, we need an anonymous function to do it for us
-
-
-```jsx
-  const handleClick = (e) => {
-    console.log("in handle click", e.target)
-    alert("One day this will help us make a new post...")
-  };
-
- <button onClick={ (e) => handleClick(e) }>New Post</button>
-```
-
+- array methods
+- object destructuring
+- ternary snytax
+- 
 
 ---
 
 
-## React Router!
+## Goals for today...
 
-- its our front end navigation
-- lets us decide what "page" to render
-- the urls are not the same as your servers urls
-- potentially the trickiest thing this week, but also the most important
-- will need to install a new dependancy, react-router-dom
-
-
----
-
-## Router Setup
-
-- we need createBrowserRouter. which will accept an array of objects
-- each object could have a path, element, or children
-- we build a tree like structure with potential nested arrays of object
-- react handles patterm matching and its pretty awesome (it wasn't always)
-```jsx
-import { createBrowserRouter, RouterProvider } from "react-router-dom" 
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Landing />
-    },
-    {
-        path: '/posts',
-        element: <Feed />
-    }
-])
-```
-
-
----
-
-## Router Provider
-
-- sets up where to render out "routes"
-- typically found in our App component
-- you can't use routing functioniality outside of it (like below, don't do it!)
-
-
-```jsx
-
-function App() {
-  return (
-    <>
-        <Link to="/posts" ></Link>
-        <RouterProvider router={ router } />
-    </>
-  )
-}
-```
-
-
----
-
-## Navigation
-
-- we use Link tags or NavBar tags depending on situation (is it a navbar? 😆)
-- we do not want to use <a></a> tags as they will cause an entire page rerender
-- NavBars add the "active" class to the link when clicked, allowing for some CSS goodness
-- both imported from "react-router-dom"
+- Self study day
+- Intro to React Content (in open for Monday)
+- Vite Walkthrough (in open for Monday)
+- Start on your homework! (homework for Tuesday)
 
 
 
 
----
-
-
-## Outlet & Layout
 
 
 
----
 
 
 
-## More stuff
 
 
----
 
 
-## For the rest of today..
 
-### Art Museum Project
-- Great long practice for today!  
-- Ask questions if you get stuck!
-- Start on your HW if you finsih early!
-- I would prioritze having homeword completed over doing a bonus phase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
