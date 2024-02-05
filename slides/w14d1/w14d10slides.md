@@ -1,0 +1,377 @@
+<style>
+    .present {
+        text-align: left;
+    }
+    img {
+        height: 300px;
+    }
+</style>
+
+---
+
+###### tags: `Week 14` `W14D2`
+
+
+---
+
+## Week 14 Day 2
+
+### How we doing?
+- How was homework?
+- How are we feeling about React so far?
+
+
+---
+
+## Week 14 Day 2 Topics
+
+- Vite
+- React Basics (review from yesterday's content)
+- React Router
+- 
+
+
+---
+
+## Vite!
+- Vite is what we will use to build a react front end from scratch
+- https://vitejs.dev/
+- Vite is only for development!
+
+```terminal
+npm create vite@latest <project-name> -- --template react
+
+npm install
+
+npm run dev
+```
+
+___
+
+## More Vite Setup - linting
+
+- We want to set up ESlinting for our applications to run automatically
+- Lets head to the walkthrough for details (maybe run the below command to start)
+
+
+```terminal
+npm install -D vite-plugin-eslint
+```
+
+---
+
+## Lets look at that App.jsx
+
+- its our first component, awwwwwww 🥺
+- lets talk about whats going on, then
+- lets clear it out and start building our own app!
+
+
+---
+
+## Patchstagram,an Instagram Clone
+
+![patch](https://res.cloudinary.com/app-academy4/image/upload/v1647291502/Patchstagram/patch_hd_riobbp.png)
+
+- we will build this front end in pieces together over the next 2 weeks
+- many of the practices will have some pieces we can relate to our Patchstagram front end
+- some practices we will just directly discuss
+
+
+
+---
+
+## Components!
+
+- App.jsx is our first!
+- Typically we want a component to have its own file
+- Capitalized Function
+- Returns 1 JSX elemement (1 parent)
+- There will be many many more to come...
+
+```jsx
+function Post() {
+    return (
+        <div>
+            <h2> Post content goes here! </h2>
+        </div>
+    );
+}
+export default Post;
+```
+
+---
+
+## More on Components
+
+- we need to render/display them somewhere...
+- most of the time we will a self closing tag
+- its possible to have a component with a closing tag, but not common (usually a wrapper)
+
+
+```jsx!
+import Post from "./components/Post"
+
+function App() {
+    return (
+        <>
+            <Post />
+        </>
+    )
+}
+```
+
+
+---
+
+## Image Tags
+
+- need to set a src attribute (nothing new i know)
+- can import the file into the component
+```jsx!
+import patchImage from "./assets/cat-image.png"
+    return (
+        <img src={ patchImage } alt="cute-cat" />
+    )
+```
+- can also referece the image name if in the public folder
+```jsx
+<img src="./cat-image.png" alt="cute-cat"/>
+```
+- we would use the above syntax if using an external url as well
+- don't forget to set an alt attribute!
+
+---
+
+## CSS... (ewww CSS)
+
+- we do need to know how to add css to our components
+- if we want to add a file for CSS
+```jsx
+import "./App.css"
+
+    <img className="main-cat-image" />
+```
+- generally best to use classes over ids in components
+- inline we can use the style attribute, but we need to use double curlies
+```jsx
+  <img style={{"height": "300px"}} src="..." />
+```
+
+---
+
+## Breaktime!
+### See ya back in 5 min 
+### When we come back, topics will be...
+
+- props
+- lists
+- events
+- routing 
+
+---
+
+
+## 🙌 Props! 🙌
+
+- we can pass information from a parent to a child component (we can NOT do child to parent)
+- we call these props
+- they are key value pairs we define on the component where it is called/rendered
+- special prop called props.children
+- destructing is cool
+- spreading works too, but please don't :pray: 
+
+
+---
+
+## Passing Props
+
+- in the parent...
+```jsx
+function App() {
+    const postTitle = "Check out that cat napping!"
+    return (
+        <>
+            <Post title={ postTitle } />
+        </>
+    )
+} 
+```
+- in the child component
+```jsx
+function Post(props){
+    return (
+        <div>
+            <h3>{ props.title }</h3>
+        </div>
+    )
+}
+```
+
+
+---
+
+## Prop Threading (or "drilling")
+
+- passing data down multiple levels of components using props
+- it's not "bad" but as our apps grow and the levels of the tree grow, it can be very confusing to pass a prop down 5-8 levels
+- there is a better way, where we can skip levels called context, but thats a Thursday thing
+
+![props-drilling](https://miro.medium.com/v2/resize:fit:640/format:webp/1*l8L4O2GM6tUw1m6fz3FN-g.jpeg)
+
+
+---
+
+## Wrapper Component
+
+- make use of props.children
+- this will be whatever content is between the parents opening and closing tags
+
+```jsx
+<PurpleWrapper>
+    <OtherComponent />
+</PurpleWrapper
+```
+
+```jsx
+function PurpleWrapper(props) {
+  console.log(props)
+  return (
+    <div style={{"color": "purple"}}>
+      { props.children }
+    </div>
+  );
+}
+```
+
+
+---
+
+## Lists 
+
+- we can use our best buddy .map to iterate over an array of data
+- need to set a key attribute, this help's react with rendering the list
+- like with our component returns, there has to be a single parent returned
+
+```jsx
+ { someData.map((postData) => (
+    <Post key={ postData.postNum } data={ postData } />
+    ))
+ }
+```
+
+
+---
+
+
+## onClick & handleClick (events)
+
+- we handle our event by attributes on the html tag (onCLick, onChange, onSubmit)
+- we do not want to invoke our handleClick in the onClick, we need an anonymous function to do it for us
+
+
+```jsx
+  const handleClick = (e) => {
+    console.log("in handle click", e.target)
+    alert("One day this will help us make a new post...")
+  };
+
+ <button onClick={ (e) => handleClick(e) }>New Post</button>
+```
+
+
+---
+
+
+## React Router!
+
+- its our front end navigation
+- lets us decide what "page" to render
+- the urls are not the same as your servers urls
+- potentially the trickiest thing this week, but also the most important
+- will need to install a new dependancy, react-router-dom
+
+
+---
+
+## Router Setup
+
+- we need createBrowserRouter. which will accept an array of objects
+- each object could have a path, element, or children
+- we build a tree like structure with potential nested arrays of object
+- react handles patterm matching and its pretty awesome (it wasn't always)
+```jsx
+import { createBrowserRouter, RouterProvider } from "react-router-dom" 
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Landing />
+    },
+    {
+        path: '/posts',
+        element: <Feed />
+    }
+])
+```
+
+
+---
+
+## Router Provider
+
+- sets up where to render out "routes"
+- typically found in our App component
+- you can't use routing functioniality outside of it (like below, don't do it!)
+
+
+```jsx
+
+function App() {
+  return (
+    <>
+        <Link to="/posts" ></Link>
+        <RouterProvider router={ router } />
+    </>
+  )
+}
+```
+
+
+---
+
+## Navigation
+
+- we use Link tags or NavBar tags depending on situation (is it a navbar? 😆)
+- we do not want to use <a></a> tags as they will cause an entire page rerender
+- NavBars add the "active" class to the link when clicked, allowing for some CSS goodness
+- both imported from "react-router-dom"
+
+
+
+
+---
+
+
+## Outlet & Layout
+
+
+
+---
+
+
+
+## More stuff
+
+
+---
+
+
+## For the rest of today..
+
+### Art Museum Project
+- Great long practice for today!  
+- Ask questions if you get stuck!
+- Start on your HW if you finsih early!
+- I would prioritze having homeword completed over doing a bonus phase
+
+
