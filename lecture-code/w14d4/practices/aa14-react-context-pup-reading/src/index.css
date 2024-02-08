@@ -1,0 +1,14 @@
+body {
+  padding: 50px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+img {
+  width: 500px;
+}
+

@@ -1,0 +1,72 @@
+body {
+  background-color: gray;
+  color: white;
+  margin: 0;
+}
+
+.details,
+.side-card {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 50px black;
+  border-radius: 4px;
+  text-align: center;
+  width: 250px;
+  margin-top: 70px;
+}
+
+.side-card {
+  height: 250px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 0.85rem;
+  text-shadow: 0 0 50px purple;
+}
+
+img {
+  width: 200px;
+  border: 1px solid white;
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  height: 40px;
+  width: 100%;
+  background: black;
+}
+
+nav > span {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 5px;
+}
+
+nav > span:hover {
+  box-shadow: 0 0 20px white;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+#root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sep-1,
+.old {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
+
+h4 {
+  font-style: italic;
+  text-align: left;
+}
