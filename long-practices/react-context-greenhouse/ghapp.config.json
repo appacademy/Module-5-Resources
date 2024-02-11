@@ -1,0 +1,13 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "src/components/Thermometer/ThermometerBonus.jsx",
+        "src/components/Hygrometer/HygrometerBonus.jsx"
+      ]
+    },
+    "CH": true,
+    "FT": true,
+    "PT": true
+  }
+}

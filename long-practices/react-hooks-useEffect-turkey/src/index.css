@@ -1,0 +1,88 @@
+/* Headers */
+html {
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    background-color: linen;
+    /* center on page */
+    max-width: 600px;
+    margin: 0 auto;
+}
+h1, h3 {
+    color: saddlebrown;
+}
+h3 {
+    padding-top: 24px;
+}
+
+/* Buttons, Image & Message Layout */
+.button-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 0 24px;
+}
+.image-area {
+    width: 0;
+    height: 0;
+    border: solid black 5px;
+    margin: 8px 20px;
+    position: relative;
+}
+.message {
+    width: 0;
+    height: 0;
+    text-align: center;
+    margin: 0 20px;
+}
+
+/* Sizes */
+.small {
+    width: 200px;
+    height: 200px;
+    font-size: 16px;
+}
+.medium {
+    width: 325px;
+    height: 325px;
+    font-size: 24px;
+}
+.large {
+    width: 450px;
+    height: 450px;
+    font-size: 32px;
+}
+.xlarge {
+    width: 600px;
+    height: 600px;
+    font-size: 40px;
+}
+
+/* Content of image area */
+.image-turkey {
+    position: absolute;
+    top: 20%;
+    left: 17%;
+    width: 64%;
+    height: 64%;
+}
+.image-feather {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: none;
+}
+.red {
+    filter: invert(1) sepia(1) saturate(100) hue-rotate(0deg);
+}
+.orange {
+    filter: invert(1) sepia(1) saturate(10) hue-rotate(0deg);
+}
+.brown {
+    filter: invert(1) sepia(1) saturate(100) hue-rotate(60deg);
+}
+.light-brown {
+    filter: invert(1) sepia(1) saturate(3) hue-rotate(0deg);
+}
+.yellow {
+    filter: invert(0) sepia(1) saturate(7) hue-rotate(0deg);
+}

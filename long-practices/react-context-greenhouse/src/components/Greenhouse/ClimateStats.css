@@ -1,0 +1,14 @@
+.climate-stats {
+  width: 150px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.climate-stats > * {
+  margin: 10px 0;
+}

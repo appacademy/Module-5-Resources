@@ -1,0 +1,12 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "src/bonus/"
+      ]
+    },
+    "CH": true, 
+    "FT": true, 
+    "PT": true  
+  }
+}

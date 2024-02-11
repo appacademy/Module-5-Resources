@@ -1,0 +1,13 @@
+.active {
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+nav > * {
+  margin-bottom: 10px;
+}
