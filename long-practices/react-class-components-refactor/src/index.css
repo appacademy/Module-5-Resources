@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+/* Set up Grid */
+div.widgets {
+  display: grid;
+  grid-template-columns: 1fr 345px 345px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". clock-button clock-button ."
+    ". clock clock ."
+    ". autocomplete  autocomplete ."
+    ". tabs weather .";
+}
+
+.clock-toggle {
+  margin-top: 20px;
+  max-width: 150px;
+  display: flex;
+  justify-content: space-around;
+  grid-area: clock-button;
+}
+
+.tabs-section {
+  grid-area: tabs;
+}
+
+.weather-section {
+  grid-area: weather;
+}
+
+.clock-section {
+  grid-area: clock;
+}
+
+.autocomplete-section {
+  grid-area: autocomplete;
+}
+
+/* Clock */
+.clock,
+button {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background-color: orange;
+}
+
+button {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.clock {
+  font-size: 28px;
+  width: 550px;
+  height: 94px;
+  border: 2px solid black;
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+}
+
+.clock p {
+  margin: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Tabs */
+
+.tab-header {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-header>li {
+  width: 33%;
+  border-top: 2px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightpink;
+}
+
+.tab-header>li:first-child {
+  border-left: 2px solid black;
+}
+
+.tab-header>li:last-child {
+  border-right: 2px solid black;
+}
+
+.tab-header>li:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+.tab-header>li.active {
+  color: white;
+  font-weight: bold;
+  background-color: lightblue;
+  border-bottom: 0px;
+}
+
+.tabs {
+  width: 240px;
+}
+
+.tab-content {
+  font-weight: bold;
+  color: white;
+  height: 192px;
+  margin: 0 20px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+/* AutoComplete */
+
+.auto {
+  font-weight: bold;
+  position: relative;
+}
+
+.auto>input {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+.auto li {
+  cursor: pointer;
+}
+
+.result-enter {
+  opacity: 0.01;
+}
+
+.result-enter.result-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.result-exit {
+  opacity: 1;
+}
+
+.result-exit.result-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.auto-dropdown {
+  position: absolute;
+  background-color: white;
+  left: 10px;
+  top: 35px;
+  padding: 10px;
+  border: 1px solid black;
+}
