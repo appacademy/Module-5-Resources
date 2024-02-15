@@ -1,0 +1,20 @@
+{
+  "programs": {
+    "BASE": {
+      "program-exclusions": [
+        "README-ch.md",
+        "README-base.md"
+      ]
+    },
+    "CH": {
+      "program-additions": [
+        "backend-rails/"
+      ],
+      "program-exclusions": [
+        "backend-express/"
+      ]
+    }, 
+    "FT": true, 
+    "PT": true
+  }
+}
