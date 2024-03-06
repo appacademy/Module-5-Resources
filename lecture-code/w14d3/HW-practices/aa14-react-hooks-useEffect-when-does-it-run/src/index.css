@@ -1,0 +1,17 @@
+*,
+body {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-bottom: 10px;
+}

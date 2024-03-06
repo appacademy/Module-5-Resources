@@ -1,0 +1,28 @@
+button {
+  font-size: 1.2em;
+  margin: 10px 0;
+  padding: 5px;
+  width: 200px;
+  height: 75px;
+  border-radius: 5px;
+}
+
+.state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.light {
+  background-color: rgb(210, 247, 189);
+  color: black;
+  height: 100vh;
+}
+
+.dark {
+  background-color: rgb(88, 8, 84);
+  color: white;
+  height: 100vh;
+}
