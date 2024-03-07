@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
-import someData, { users } from "../data"
+import { users } from "../data"
 import { useNavigate } from 'react-router-dom'
+import { usePostsContext } from '../context/PostsContext'
 
 export default function PostForm() {
+    const { posts, setPosts }= usePostsContext()
     const [title, setTitle] = useState("")
     const [image, setImage] = useState("")
     const [author, setAuthor] = useState("")
@@ -37,7 +39,7 @@ export default function PostForm() {
         console.log(selectedUser)
 
         const newPost = {
-            id: someData.length + 1,
+            id: posts.length + 1,
             title,
             image,
             author: selectedUser,
@@ -46,7 +48,8 @@ export default function PostForm() {
             likes: Math.floor(Math.random() + 10)
         }
         console.log(newPost)
-        someData.push(newPost)
+        // someData.push(newPost)
+        setPosts([...posts, newPost])
         setAuthor('')
         setTitle('')
         setImage('')
