@@ -1,0 +1,42 @@
+.navbar-links-container {
+    width: 1200px;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 22px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+} 
+
+.navbar-subcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo {
+    height: 65px;
+    width:  65px;
+    margin-right: 35px;
+}
+
+.navbar-title {
+    font-family: Billabong;
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+}
+
+.navbar-logowrapper {
+    height: 85px;
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border-radius: 90px;
+    padding: 5px;
+}

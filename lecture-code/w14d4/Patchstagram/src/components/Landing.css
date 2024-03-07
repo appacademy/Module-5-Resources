@@ -1,0 +1,25 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-title {
+    font-family: Billabong;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.landing-button {
+    margin: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: whitesmoke;
+}
+
+.landing-subtitle {
+    font-size: 20px;
+    margin: 10px;
+}
