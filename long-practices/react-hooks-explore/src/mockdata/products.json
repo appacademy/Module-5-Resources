@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "code": "abc",
+    "name": "Bistro Table and Benches",
+    "price": "$599.99",
+    "description": "Hand crafted bistro table made by local artisans following historical traditions passed down for seven generations.",
+    "photo": {
+      "filename": "products/table.jpg",
+      "link": "https://www.pexels.com/photo/green-leafed-potted-plant-on-bistro-table-2647714/",
+      "credit": "Photo by Blank Space from Pexels"
+    },
+    "details": [
+      {
+        "label": "Table",
+        "value": "30-inch round top, 32 inches high"
+      },
+      {
+        "label": "Benches",
+        "value": "30-inch x 19-inch, 22 inches high"
+      },
+      {
+        "label": "Design",
+        "value": "Modern, Simple, Elegant"
+      },
+      {
+        "label": "Surface Materials",
+        "value": "Hickory and Oak"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "code": "xyz",
+    "name": "Classic Chair",
+    "price": "$43.88",
+    "description": "Simple and elegant. Perfect for guests at parties and gatherings!",
+    "photo": {
+      "filename": "products/chair.jpg",
+      "link": "https://www.pexels.com/photo/green-wooden-chair-on-white-surface-963486/",
+      "credit": "Photo by Paula Schmidt from Pexels"
+    },
+    "details": [
+      {
+        "label": "Color",
+        "value": "Green"
+      },
+      {
+        "label": "Material",
+        "value": "Wood"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "code": "klm",
+    "name": "Park Bench",
+    "price": "$125.00",
+    "description": "The classic park bench style is now available for your own backyard!",
+    "photo": {
+      "filename": "products/bench.jpg",
+      "link": "https://www.pexels.com/photo/empty-bench-2828827/",
+      "credit": "Photo by Dariusz Staniszewski from Pexels"
+    },
+    "details": [
+      {
+        "label": "Color",
+        "value": "Green"
+      },
+      {
+        "label": "Materials",
+        "value": "Pressure treated wood, wrought iron"
+      }
+    ]
+  }
+]

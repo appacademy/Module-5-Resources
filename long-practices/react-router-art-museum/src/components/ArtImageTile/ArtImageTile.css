@@ -1,0 +1,12 @@
+.image-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+}
+
+.image-tile img {
+  max-width: 200px;
+  max-height: 200px;
+}

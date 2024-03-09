@@ -1,0 +1,42 @@
+.thermometer-slider {
+  height: 200px;
+}
+
+.thermometer-thumb {
+  height: 25px;
+  line-height: 25px;
+  width: 25px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  cursor: grab;
+}
+
+.thermometer-track {
+  top: 0;
+  bottom: 0;
+  background: gray;
+  border-radius: 999px;
+  left: 5px;
+  width: 15px;
+}
+
+.thermometer-track.thermometer-track-0 {
+  background: red;
+}
+
+.actual-temp {
+  width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,14 @@
+.art-description img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.art-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.art-image-list {
+  display: flex;
+  flex-wrap: wrap;
+}
